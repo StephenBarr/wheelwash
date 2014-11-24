@@ -1,0 +1,2 @@
+[20-Oct-2014 10:38:00 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/renewdesign/public_html/wheelwash/sphider/templates/standard/footer_es.html on line 13
+[20-Oct-2014 10:38:03 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/renewdesign/public_html/wheelwash/sphider/templates/standard/footer_es.html on line 13
