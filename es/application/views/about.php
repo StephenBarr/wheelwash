@@ -1,15 +1,15 @@
-<div class="slide-container" style="background-image:url(http://wheelwash.com/uploads/<?php foreach ($slides as $slide) { if($slide->name == 'about') { echo $slide->image_link_5; } }?>);">
+<div class="slide-container" style="background-image:url(<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php foreach ($slides as $slide) { if($slide->name == 'about') { echo $slide->image_link_5; } }?>);">
   <div class="wrap">
-    <ul style="background-image:url(http://wheelwash.com/uploads/<?php foreach ($slides as $slide) { if($slide->name == 'about') { echo $slide->image_link_1; } }?>);">
+    <ul style="background-image:url(<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php foreach ($slides as $slide) { if($slide->name == 'about') { echo $slide->image_link_1; } }?>);">
       <a href="#" class="arrow-left"><i class="fa fa-angle-left"></i></a> <a href="#" class="arrow-right"><i class="fa fa-angle-right"></i></a>
       <?php foreach ($slides as $slide) { ?>
       <?php if($slide->name == 'about') { ?>
-      <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_1; ?>"> </li>
-      <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_2; ?>" > </li>
-      <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_3; ?>" > </li>
-      <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_4; ?>" > </li>
-      <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_5; ?>" > </li>
-      <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_6; ?>" > </li>
+      <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_1; ?>" alt="Wheelwash wheel cleaning solutions - About our products" /> </li>
+      <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_2; ?>" alt="Wheelwash wheel cleaning solutions - About our products" /> </li>
+      <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_3; ?>" alt="Wheelwash wheel cleaning solutions - About our products" /> </li>
+      <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_4; ?>" alt="Wheelwash wheel cleaning solutions - About our products" /> </li>
+      <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_5; ?>" alt="Wheelwash wheel cleaning solutions - About our products" /> </li>
+      <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_6; ?>" alt="Wheelwash wheel cleaning solutions - About our products" /> </li>
       <?php } ?>
       <?php } ?>
     </ul>
@@ -34,11 +34,11 @@
 	  <li>Obtener una reputación de profesionalismo y fiabilidad, convirtiéndose así en el líder del mercado.</li>
     </ul>
     <div class="line"></div>
-    <!--<div class="middle" style="background:url(http://wheelwash.com/img/about-1.jpg);"><div class="gradient"></div></div>-->
+    <!--<div class="middle" style="background:url(<?php echo $this->config->item('outside_base_url'); ?>img/about-1.jpg);"><div class="gradient"></div></div>-->
     <div class="three-circles" style="margin-bottom:48px;">
-      <figure><img src="http://wheelwash.com/img/history-1.jpg" /></figure>
-      <figure><img src="http://wheelwash.com/img/history-2.png" /></figure>
-      <figure><img src="http://wheelwash.com/img/history-3.jpg" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/history-1.jpg" alt="Wheelwash wheel cleaning solutions - History of our products" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/history-2.png" alt="Wheelwash wheel cleaning solutions - History of our products" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/history-3.jpg" alt="Wheelwash wheel cleaning solutions - History of our products" /></figure>
     </div>
     <h2>Wheelwash tiene como objetivos:</h2>
     <ul class="about-list">
@@ -61,21 +61,21 @@
 	Mobile: 07885 968813<br />
 	Email: <a href="mailto:agalley@wheelwash.com" target="_blank">agalley@wheelwash.com</a></p>-->
     <div class="line"></div>
-    <!--<div class="middle" style="background:url(http://wheelwash.com/img/about-2.jpg);"><div class="gradient"></div></div>-->
+    <!--<div class="middle" style="background:url(<?php echo $this->config->item('outside_base_url'); ?>img/about-2.jpg);"><div class="gradient"></div></div>-->
     <h1>NUESTROS CLIENTES</h1>
     <h2>Miles de organizaciones de todos los tamaños se benefician de nuestras soluciones de limpieza de ruedas</h2>
     <p>Los clientes de Wheelwash Limited se dedican al desarrollo de la tierra, la construcción, la explotación de canteras, minería, eliminación de residuos, demolición, relleno sanitario, reciclaje de residuos, fabricación y distribución. Nuestra gama de productos de limpieza de las ruedas es enorme y nuestro servicio es inigualable. Sea cual sea el tamaño de la empresa, independientemente de las condiciones del sitio, tenemos una solución.</p>
     <!--<p>Cemex UK  -  BAM Nuttall  -  Sita  -  Morgan EST  -  Morrisons Construction  -  Galliford Try  -  Select Plant  -  J Murphy & Sons  -  Volker Fitzpatrick  -  Balfour Beatty  -  Taylor Wimpey -  Redrow Homes  -  Skanska  -  Thames Water  - Tarmac  -  Morgan Sindall  -  Biffa Waste  -  Scottish Coal  -  Carillion - Morrison Construction, and many more . . .</p>-->
     <div class="main-container logoscroll" style="margin-left:-10%;">
       <div class="main wrapper clearfix">
-        <div class="row"><img src="http://wheelwash.com/img/bam-logo.png" /> <img src="http://wheelwash.com/img/cemex-logo.png" /> <img src="http://wheelwash.com/img/skanska-logo.png" /> <img src="http://wheelwash.com/img/taylor-logo.png" /> <img src="http://wheelwash.com/img/lafarge-logo.png" /></div><div class="row"> <img src="http://wheelwash.com/img/van-logo.png" /> <img src="http://wheelwash.com/img/codelco-logo.png" /> <img src="http://wheelwash.com/img/castle-logo.png" /> <img src="http://wheelwash.com/img/anglo-logo.png" /> <img src="http://wheelwash.com/img/hanson-logo.png" /> </div></div>
+        <div class="row"><img src="<?php echo $this->config->item('outside_base_url'); ?>img/bam-logo.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/cemex-logo.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/skanska-logo.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/taylor-logo.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/lafarge-logo.png" /></div><div class="row"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/van-logo.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/codelco-logo.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/castle-logo.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/anglo-logo.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/hanson-logo.png" /> </div></div>
     </div>
     <div class="line"></div>
-    <!--<div class="middle" style="background:url(http://wheelwash.com/img/about-3.jpg);"><div class="gradient"></div></div>-->
+    <!--<div class="middle" style="background:url(<?php echo $this->config->item('outside_base_url'); ?>img/about-3.jpg);"><div class="gradient"></div></div>-->
     <div class="three-circles">
-      <figure><img src="http://wheelwash.com/img/careers-1.jpg" /></figure>
-      <figure><img src="http://wheelwash.com/img/careers-2.jpg" /></figure>
-      <figure><img src="http://wheelwash.com/img/careers-3.jpg" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/careers-1.jpg" alt="Wheelwash wheel cleaning solutions - Find a career with us" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/careers-2.jpg" alt="Wheelwash wheel cleaning solutions - Find a career with us" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/careers-3.jpg" alt="Wheelwash wheel cleaning solutions - Find a career with us" /></figure>
     </div>
     <h1>Trabaje en Wheelwash</h1>
     <p>Ofrecemos una amplia gama de oportunidades de carrera aquí en Wheelwash, de los ingenieros de fabricación y de servicio de campo equipos de apoyo de oficina y administración. Al invertir en la formación y el desarrollo de cada empleado hemos establecido relaciones de trabajo de muy larga duracion, lo que resulta en un equipo leal y dedicado, que se centran en las necesidades de los clientes.</p>
@@ -85,14 +85,14 @@
 <div class="main-container news">
   <div class="main wrapper clearfix">
     <div class="news-left">
-      <p><a href="<?php echo base_url('news');?>">NOTICIAS</a></p>
+      <p><a href="<?php echo base_url('news');?>" title="Wheelwash wheel cleaning solutions - Recent news articles">NOTICIAS</a></p>
     </div><div class="news-right">
       <ul class="news-content">
         <?php $v = 0; foreach ($news as $newsitem) { ?>
         <li>
           <?php $v++; ?>
-          <figure><img src="http://wheelwash.com/uploads/<?php echo $newsitem->image_link; ?>" /></figure>
-          <p><a href="<?php echo base_url('news');?>/show/<?php echo $newsitem->id; ?>"><?php echo $newsitem->title; ?></a><br />
+          <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $newsitem->image_link; ?>" alt="Wheelwash wheel cleaning solutions - Recent news articles" /></figure>
+          <p><a href="<?php echo base_url('news');?>/show/<?php echo $newsitem->id; ?>" title="Wheelwash wheel cleaning solutions - Recent news articles - <?php echo $newsitem->title; ?>"><?php echo $newsitem->title; ?></a><br />
             <br />
             <?php echo substr($newsitem->content, 0, 120) . '...'; ?></p>
           <?php if($v == 5) break; ?>

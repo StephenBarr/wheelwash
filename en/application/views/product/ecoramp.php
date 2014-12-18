@@ -5,7 +5,7 @@
       <h4>High performance dry ramp system</h4>
     </div>
     <div class="productright one">
-      <img src="http://wheelwash.com/img/ecoramp-logo.png" />
+      <img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-logo.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />
     </div>
     <div class="productleft">
       <p><b>The Rhino Ecoramp is a simple, drive-over dry ramp system designed to prevent the spread of site dirt and debris on to public highways. It is our most environmentally friendly wheel cleaning system because it requires no power or water plus it’s virtually maintenance-free. It works on the vibration effect created by the vehicle tyres driving over inverted steel angle.</b></p>
@@ -16,26 +16,28 @@
     </div>
     <div class="productright">
       <ul>
-        <li><img src='http://wheelwash.com/img/icon-4.png' />No Power</li>
-        <li><img src='http://wheelwash.com/img/icon-15.png' />No Water</li>
-        <li><img src='http://wheelwash.com/img/icon-16.png' />Min 5 wheel revolutions</li>
-        <li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li>
-        <li><img src='http://wheelwash.com/img/icon-6.png' />Mobile</li>
-        <li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-4.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />No Power</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-15.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />No Water</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-16.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />Min 5 wheel revolutions</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-3.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />No Operator</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-6.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />Mobile</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-5.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />No Civils</li>
       </ul>
     </div>
     <div class="line"></div>
-    <div class="productimage"> <img src="http://wheelwash.com/img/ecoramp-1.jpg" /> </div>
+    <div class="productimage"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-1.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" /> </div>
     <div class="specifications">
       <table>
         <tbody>
           <tr>
             <td>Ramps</td>
-            <td>3000mm x 1100mm x 415mm</td>
+            <td>3000mm x 1100mm x 380mm<br />
+              450Kg (each)</td>
           </tr>
           <tr>
             <td>Mobile Road</td>
-            <td>4000mm x 1100mm x 415mm</td>
+            <td>4000mm x 1100mm x 380mm<br />
+              657Kg (each)</td>
           </tr>
           <tr>
             <td>Safety Barriers</td>
@@ -43,16 +45,17 @@
           </tr>
         </tbody>
       </table>
+      <p style="font-size:10px;padding-left:12px">Image shows 18m Rhino Ecoramp system</p>
     </div>
     <div class="line"></div>
     <div class="productbottomleft">
       <ul>
-        <li><img src="http://wheelwash.com/img/ecoramp-2.jpg" />Low profile ramps prevent grounding</li>
-        <li><img src="http://wheelwash.com/img/ecoramp-3.jpg" />Spacer bars for added rigidity</li>
-        <li><img src="http://wheelwash.com/img/ecoramp-4.jpg" />Safety barriers</li>
-        <li><img src="http://wheelwash.com/img/ecoramp-5.jpg" />Various lengths available</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-2.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />Low profile ramps prevent grounding</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-3.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />Spacer bars for added rigidity</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-4.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />Safety barriers</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-5.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />Various lengths available</li>
       </ul>
-      <a href="Rhino%20Ecoramp.pdf" class="button download" target="_blank">Download PDF</a> <a href="http://wheelwash.com/en/product" class="button">See all products</a> <a href="http://wheelwash.com/en/contact" class="button">Contact Us</a>
+      <a href="Rhino%20Ecoramp.pdf" class="button download" target="_blank" title="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp PDF">Download PDF</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>en/product" class="button" title="Wheelwash wheel cleaning solutions - Product Details - All products">See all products</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>en/contact" class="button" title="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp Contact information">Contact Us</a>
     </div>
     <div class="productbottomright">
       <h4>Customer Requirements</h4>
@@ -62,7 +65,7 @@
       </ul>
     </div>
     <div class="productbottom">
-      <div><img src="http://wheelwash.com/img/madeinbritain.png" /> <img src="http://wheelwash.com/img/iso.png" />
+      <div><img src="<?php echo $this->config->item('outside_base_url'); ?>img/madeinbritain.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/iso.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoramp" />
       </div>
       <p>* All weights are approximate dry weights. Wheelwash Limited reserves the right to change detailed specifications from time to time. Drawings are to show indicative layouts only and are not to scale. Specifications are based on supply within the UK, please ask for details outside of this location. Specifications may vary when systems supplied as rental units.<br />
         ** Optional<br />

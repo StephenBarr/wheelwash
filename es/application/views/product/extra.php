@@ -5,7 +5,7 @@
       <h4>Sistema de lavado de alto rendimiento por aspersión con sistema de recirculación de agua</h4>
     </div>
     <div class="productright one">
-      <img src="http://wheelwash.com/img/extra-logo.png" />
+      <img src="<?php echo $this->config->item('outside_base_url'); ?>img/extra-logo.png" />
     </div>
     <div class="productleft">
       <p><b>El Rhino Ecowash Extra es un sistema de lavado automático por aspersión de agua a alta presión diseñado para prevenir la extensión de lodos y residuos a las carreteras. Al igual que muchos de los sistemas de la gama Rhino Ecowash, funciona con bombas alimentadas a través de variadores de velocidad lo que proporciona ahorros de hasta un 50% en costes operacionales, un rendimiento sin igual, una elevada fiabilidad y una alta flexibilidad de presión de agua. Su modelo de operación en circuito cerrado permite la máxima reutilización del agua.</b></p>
@@ -17,20 +17,20 @@ El sistema viene de estándar con una manguera de lavado para un lavado adiciona
     </div>
     <div class="productright">
       <ul>
-        <li><img src='http://wheelwash.com/img/icon-7.png' />Variador de velocidad</li>
-        <li><img src='http://wheelwash.com/img/icon-9.png' />-50% Costes operacionales</li>
-        <li><img src='http://wheelwash.com/img/icon-10.png' />4.2 BAR</li>
-        <li><img src='http://wheelwash.com/img/icon-11.png' />60 amps<br />40 kva</li>
-        <li><img src='http://wheelwash.com/img/icon-1.png' />36,000 L reciclaje de agua</li>
-        <li><img src='http://wheelwash.com/img/icon-2.png' />1-2 Revoluciones de ruedas</li>
-        <li><img src='http://wheelwash.com/img/icon-6.png' />Móvil</li>
-        <li><img src='http://wheelwash.com/img/icon-5.png' />No requiere obra civil</li>
-        <li><img src='http://wheelwash.com/img/icon-12.png' />Sumidero externo</li>
-        <li><img src='http://wheelwash.com/img/icon-3.png' />Funcionamiento automático</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-7.png' />Variador de velocidad</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-9.png' />-50% Costes operacionales</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-10.png' />4.2 BAR</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-11.png' />60 amps<br />40 kva</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-1.png' />36,000 L reciclaje de agua</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-2.png' />1-2 Revoluciones de ruedas</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-6.png' />Móvil</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-5.png' />No requiere obra civil</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-12.png' />Sumidero externo</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-3.png' />Funcionamiento automático</li>
       </ul>
     </div>
     <div class="line"></div>
-    <div class="productimage"> <img src="http://wheelwash.com/img/extra-1.jpg" /> </div>
+    <div class="productimage"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/extra-1.jpg" /> </div>
     <div class="specifications">
     <style>.main-container.product .wrapper .specifications table td:nth-child(2) { border-right: 1px solid #CCC; }</style>
       <table>
@@ -42,47 +42,57 @@ El sistema viene de estándar con una manguera de lavado para un lavado adiciona
           </tr>
           <tr>
             <td>Plataforma de lavado</td>
-            <td>4000mm x 3300mm x 415mm</td>
-            <td>6000mm x 3300mm x 415mm</td>
+            <td>4000mm x 3500mm x 380mm<br />
+              2853, 2650 Litros de capicadad</td>
+            <td>6000mm x 3500mm x 380mm<br />
+              3224Kg, 3975 Litros de capicadad</td>
+          </tr>
+          <tr>
+            <td>Pantallas laterales (cada una)</td>
+            <td>4 de / 2000mm x 2000mm x 43mm<br />
+              110Kg (cada una)</td>
+            <td>6 de / 2000mm x 2000mm x 43mm<br />
+              110Kg (cada una)</td>
           </tr>
           <tr style="border-bottom:0px">
             <td>Rampas**</td>
-            <td>3000mm x 1100mm x 415mm</td>
-            <td>3000mm x 1100mm x 415mm</td>
+            <td>3000mm x 1100mm x 380mm<br />
+              450Kg (cada una)</td>
+            <td>3000mm x 1100mm x 380mm<br />
+              450Kg (cada una)</td>
           </tr>
           <tr>
             <td>Tramos móviles**</td>
-            <td>3000mm x 1100mm x 415mm</td>
-            <td>3000mm x 1100mm x 415mm</td>
+            <td>4000mm x 1100mm x 380mm<br />
+              657Kg (cada una)</td>
+            <td>4000mm x 1100mm x 380mm<br />
+              657Kg (cada una)</td>
           </tr>
           <tr style="border-bottom:0px">
-            <td>Wash Pump</td>
-            <td>22 Kw, 1850 L/min</td>
-            <td>30 Kw, 1850 L/min</td>
+            <td>Bomba Lavado</td>
+            <td>22 Kw, 1850 L/min<br />
+              Variador de velocidad</td>
+            <td>30 Kw, 2025 L/min<br />
+              Variador de velocidad</td>
           </tr>
           <tr>
-            <td>Recovery Pump</td>
-            <td>3.8 Kw, 1050 L/min</td>
-            <td>3.8 Kw, 1050 L/min</td>
+            <td>Bomba Lodos</td>
+            <td>5.5 Kw, 1200 L/min</td>
+            <td>5.5 Kw, 1200 L/min</td>
           </tr>
           <tr style="border-bottom:0px">
             <td>Depósito de sedimentación</td>
             <td>6000mm x 2000mm x 2000mm<br />
-              24,000 l capacidad<br /></td>
+              2150Kg, 24,000 Litros de capacidad<br /></td>
             <td>6000mm x 2000mm x 2000mm<br />
-              24,000 l capacidad</td>
+              2150Kg, 24,000 Litros de capacidad</td>
           </tr>
           <tr>
             <td>Estación de bombeo/deposito principal</td>
-            <td>4000mm x 2000mm x 2000mm<br />
-              12,000 L capacidad</td>
-            <td>4000mm x 2000mm x 2000mm<br />
-              12,000 L capacidad</td>
-          </tr>
-          <tr>
-            <td>Pantallas laterales (Each)</td>
-            <td>2000mm x 2000mm x 43mm (4)</td>
-            <td>2000mm x 2000mm x 43mm (6)</td>
+            <td>400mm x 2000mm x 2000mm<br />
+              1548Kg, 12,000 Litros de capacidad</td>
+            <td>400mm x 2000mm x 2000mm<br />
+              1548Kg, 12,000 Litros de capacidad</td>
           </tr>
           <tr>
             <td>Manguara de lavado</td>
@@ -90,16 +100,16 @@ El sistema viene de estándar con una manguera de lavado para un lavado adiciona
             <td>12m</td>
           </tr>
           <tr>
-            <td>Sensores</td>
+            <td>Sensor de entrada</td>
             <td>entrada y salida</td>
             <td>entrada y salida</td>
           </tr>
           <tr>
-            <td>Se requiere energía</td>
+            <td>Suministro electrico</td>
             <td>415v, 3phase, 50Hz<br />
-              60amps, 40kva</td>
+              60 A, 40kva</td>
             <td>415v, 3phase, 50Hz<br />
-              80amps, 60kva</td>
+              80 A, 60kva</td>
           </tr>
         </tbody>
       </table>
@@ -107,12 +117,12 @@ El sistema viene de estándar con una manguera de lavado para un lavado adiciona
     <div class="line"></div>
     <div class="productbottomleft">
       <ul>
-        <li><img src="http://wheelwash.com/img/extra-2.jpg" />Único con un lavado eficaz y preciso</li>
-        <li><img src="http://wheelwash.com/img/extra-3.jpg" />Energía ajustable y costes reducidos</li>
-        <li><img src="http://wheelwash.com/img/extra-4.jpg" />Lavado automático, rejillas desmontables</li>
-        <li><img src="http://wheelwash.com/img/extra-5.jpg" />Sedimentación mejorada con válvulas de abre fácil y vacío</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/extra-2.jpg" />Único con un lavado eficaz y preciso</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/extra-3.jpg" />Energía ajustable y costes reducidos</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/extra-4.jpg" />Lavado automático, rejillas desmontables</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/extra-5.jpg" />Sedimentación mejorada con válvulas de abre fácil y vacío</li>
       </ul>
-      <a href="Rhino%20Ecowash%20Extra.pdf" class="button download" target="_blank">Descargar ficha técnica en .pdf</a> <a href="http://wheelwash.com/es/product" class="button">Haga clic aquí para más información</a> <a href="http://wheelwash.com/es/contact" class="button">Contactar</a>
+      <a href="Rhino%20Ecowash%20Extra.pdf" class="button download" target="_blank">Descargar ficha técnica en .pdf</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>es/product" class="button">Haga clic aquí para más información</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>es/contact" class="button">Contactar</a>
     </div>
     <div class="productbottomright">
       <h4>Requisitos del cliente</h4>
@@ -125,7 +135,7 @@ El sistema viene de estándar con una manguera de lavado para un lavado adiciona
       </ul>
     </div>
     <div class="productbottom">
-      <div> <img src="http://wheelwash.com/img/madeinbritain.png" /> <img src="http://wheelwash.com/img/iso.png" /> </div>
+      <div> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/madeinbritain.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/iso.png" /> </div>
       <p>* Todos los pesos son aproximados y de las piezas secas. Wheelwash Limited se reserva el derecho de cambiar las especificaciones detalladas. Los dibujos son para mostrar los diseños y no se encuentran a escala.
 Las especificaciones se basan en los modelos disponibles para el Reino Unido, por favor pregunte por los detalles fuera de esta ubicación. Las especificaciones pueden variar cuando se suministran equipos de alquiler.<br />
         ** Optional</p>

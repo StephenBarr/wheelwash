@@ -5,7 +5,7 @@
       <h4>Sistema de Tratamiento de Agua Residual Ecoclear</h4>
     </div>
     <div class="productright one">
-      <img src="http://wheelwash.com/img/ecoclear-logo.png" />
+      <img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-logo.png" />
     </div>
     <div class="productleft">
       <p><b>El Sistema de Tratamiento de Agua Residual Ecoclear es el mejor clarificador de lamelas diseñado para utilizar en aplicaciones de lava ruedas. Ha sido desarrollado en colaboración con Scott Vickers Pte, que disponen de una dilatada experiencia a nivel mundial en la fabricación de la gama de sistemas Cleartec de limpieza de aguas residuales y superficiales para obras de construcción.</b></p>
@@ -17,36 +17,38 @@
     </div>
     <div class="productright">
       <ul>
-        <li><img src='http://wheelwash.com/img/icon-4.png' />No necesita energía</li>
-        <li><img src='http://wheelwash.com/img/icon-1.png' />=200m<sup>2</sup> reciclaje de agua</li>
-        <li><img src='http://wheelwash.com/img/icon-3.png' />Funcionamiento automatico</li>
-        <li style="border-width: 0 0 9px 0;border-style:solid"><img src='http://wheelwash.com/img/icon-6.png' />Móvil</li>
-        <li><img src='http://wheelwash.com/img/icon-5.png' />No requiere obra civil</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-4.png' />No necesita energía</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-1.png' />=200m<sup>2</sup> reciclaje de agua</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-3.png' />Funcionamiento automatico</li>
+        <li style="border-width: 0 0 9px 0;border-style:solid"><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-6.png' />Móvil</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-5.png' />No requiere obra civil</li>
       </ul>
     </div>
     <div class="line"></div>
-    <div class="productimage"> <img src="http://wheelwash.com/img/ecoclear-1.jpg" /> </div>
+    <div class="productimage"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-1.jpg" /> </div>
     <div class="specifications">
       <table>
         <tbody>
           <tr>
             <td>Deposito principal</td>
             <td>2000mm x 4000mm x 2000mm<br />
-              16,000 l capacidad </td>
+              1300Kg, 12,000 Litros de capacidad</td>
           </tr>
           <tr style="border-bottom:0px">
             <td>Deposito secundario</td>
-            <td>4000mm x 1800mm x 2500mm = 192m<sup>2</sup></td>
+            <td>4000mm x 1800mm x 1250mm<br />
+              1250Kg, 1200 Litros de capacidad = 192m<sup>2</sup></td>
           </tr>
           <tr>
             <td>Sala de bombas</td>
-            <td>2000mm x 2000mm x 4000mm<br />
-              12,000 l capacidad</td> 
+            <td>400mm x 2000mm x 2000mm<br />
+              1548Kg, 12,000 Litros de capacidad</td> 
           </tr>
           <tr>
             <td>Capacidad total</td>
             <td>200m<sup>2</sup><br />
-              =16 depósitos de sedimentación</td>
+              =16 depósitos de sedimentación<br />
+              =2 Pozos</td>
           </tr>
         </tbody>
       </table>
@@ -54,13 +56,13 @@
     <div class="line"></div>
     <div class="productbottomleft">
       <ul>
-        <li><img src="http://wheelwash.com/img/ecoclear-2.jpg" />Los bloques de lamelas proporcionan un área extensiva para la eliminación eficaz de sólidos
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-2.jpg" />Los bloques de lamelas proporcionan un área extensiva para la eliminación eficaz de sólidos
 </li>
-        <li><img src="http://wheelwash.com/img/ecoclear-3.jpg" />Válvulas automáticas en la tolva para un vaciado automático</li>
-        <li><img src="http://wheelwash.com/img/ecoclear-4.jpg" />Tapado y transitable</li>
-        <li><img src="http://wheelwash.com/img/ecoclear-5.jpg" />Alta calidad del Agua reciclada</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-3.jpg" />Válvulas automáticas en la tolva para un vaciado automático</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-4.jpg" />Tapado y transitable</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-5.jpg" />Alta calidad del Agua reciclada</li>
       </ul>
-      <a href="Rhino%20Ecoclear.pdf" class="button download" target="_blank">Descargar ficha técnica en .pdf</a> <a href="http://wheelwash.com/es/product" class="button">Haga clic aquí para más información</a> <a href="http://wheelwash.com/es/contact" class="button">Contactar</a>
+      <a href="Rhino%20Ecoclear.pdf" class="button download" target="_blank">Descargar ficha técnica en .pdf</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>es/product" class="button">Haga clic aquí para más información</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>es/contact" class="button">Contactar</a>
     </div>
     <div class="productbottomright">
       <h4>Requisitos del cliente</h4>
@@ -71,7 +73,7 @@
       </ul>
     </div>
     <div class="productbottom">
-      <div> <img src="http://wheelwash.com/img/madeinbritain.png" /> <img src="http://wheelwash.com/img/iso.png" /> </div>
+      <div> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/madeinbritain.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/iso.png" /> </div>
       <p>* Todos los pesos son aproximados y de las piezas secas. Wheelwash Limited se reserva el derecho de cambiar las especificaciones detalladas. Los dibujos son para mostrar los diseños y no se encuentran a escala.
 Las especificaciones se basan en los modelos disponibles para el Reino Unido, por favor pregunte por los detalles fuera de esta ubicación. Las especificaciones pueden variar cuando se suministran equipos de alquiler.</p>
     </div>

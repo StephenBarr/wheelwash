@@ -10,24 +10,24 @@
 	<p>The Wheelwash  website may contain "links" to other sites, and Wheelwash cannot and is not responsible for maintaining the user's privacy once he leaves the Wheelwash site. Wheelwash attempts to only link to sites that share Wheelwash's high standards and respect for privacy.</p>
     <h1>Security</h1>
     <p>Wheelwash takes reasonable precautions to keep all information obtained from its online visitors secure against unauthorised access and use and Wheelwash will periodically review its security measures in an effort to ensure the user's privacy. Wheelwash will not, without the user's permission, give, sell or provide to others for a fee any information that the user provides to us, except as set forth herein. Wheelwash will always ask for and obtain the user's permission before sharing the user information with anyone other than Wheelwash subsidiaries and affiliates, unless Wheelwash believes in good faith that the law requires our Company to do so.</p>
-    <p>If the user wishes to verify any voluntary information collected about him, or if he wish to be removed from the Wheelwash site database, he can contact Wheelwash at <a href="mailto:sales@wheelwash.com">sales@wheelwash.com</a></p>
+    <p>If the user wishes to verify any voluntary information collected about him, or if he wish to be removed from the Wheelwash site database, he can contact Wheelwash at <a href="mailto:sales@wheelwash.com" title="Wheelwash - Wheel cleaning solutions - Email the sales team and enquire about our products">sales@wheelwash.com</a></p>
     <p>&nbsp;</p>
-    <!--<p><a href="http://www.wheelwash.com/es/news-and-events/subscribe">Subscribe Please subscribe for information.</a></p>-->
-	<p><a href="http://www.wheelwash.com/es/contact">Contact Please contact us with your enquiry</a></p>
-	<p><a href="http://www.wheelwash.com/es/product">Downloads Brochures & data sheets.</a></p>
+    <!--<p><a href="<?php echo $this->config->item('outside_base_url'); ?>en/news-and-events/subscribe">Subscribe Please subscribe for information.</a></p>-->
+	<p><a href="<?php echo $this->config->item('outside_base_url'); ?>en/contact" title="Wheelwash - Wheel cleaning solutions - Email, phone or get directions to the sales team and enquire about our products">Contact Please contact us with your enquiry</a></p>
+	<p><a href="<?php echo $this->config->item('outside_base_url'); ?>en/product" title="Wheelwash - Wheel cleaning solutions - Find out more about the products and download brochures and product specifications">Downloads Brochures & data sheets.</a></p>
   </div>
 </div>
 <div class="main-container news">
   <div class="main wrapper clearfix">
     <div class="news-left">
-      <p><a href="<?php echo base_url('news');?>">NEWS</a></p>
+      <p><a href="<?php echo base_url('news');?>" title="Wheelwash - Wheel cleaning solutions - Recent news articles and updates">NOTICIAS</a></p>
     </div><div class="news-right">
       <ul class="news-content">
         <?php $v = 0; foreach ($news as $newsitem) { ?>
         <li>
           <?php $v++; ?>
-          <figure><img src="http://wheelwash.com/uploads/<?php echo $newsitem->image_link; ?>" /></figure>
-          <p><a href="<?php echo base_url('news');?>/show/<?php echo $newsitem->id; ?>"><?php echo $newsitem->title; ?></a><br /><br /><?php echo substr($newsitem->content, 0, 120) . '...'; ?></p>
+          <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $newsitem->image_link; ?>" alt="Wheelwash - Wheel cleaning solutions - Recent news articles - <?php echo $newsitem->title; ?>" /></figure>
+          <p><a href="<?php echo base_url('news');?>/show/<?php echo $newsitem->id; ?>" title="Wheelwash wheel cleaning solutions - Recent news articles - <?php echo $newsitem->title; ?>"><?php echo $newsitem->title; ?></a><br /><br /><?php echo substr($newsitem->content, 0, 120) . '...'; ?></p>
           <?php if($v == 5) break; ?>
         </li>
         <?php } ?>

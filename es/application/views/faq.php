@@ -1,6 +1,6 @@
 <div class="main-container faq">
   <div class="main wrapper clearfix">
-  	<div class="middle" style="background:url(http://wheelwash.com/img/faq.jpg) no-repeat center center;"><div class="gradient"></div></div>
+  	<div class="middle" style="background:url(<?php echo $this->config->item('outside_base_url'); ?>img/faq.jpg) no-repeat center center;"><div class="gradient"></div></div>
     <h1>Frequently Asked Questions</h1>
     <h2>How do the wheel cleaning units get delivered?</h2>
 	<p>Most systems are delivered to domestic locations on a crane off-load vehicle.  Systems for export can be containerised or delivered on a curtainsider/ tautliner vehicle.   In all instances, there must be sufficient space available on site, adjacent to the preferred location of the wheel wash, for a side lift off the delivery vehicle.</p>
@@ -26,8 +26,8 @@
         <?php $v = 0; foreach ($news as $newsitem) { ?>
         <li>
           <?php $v++; ?>
-          <figure><img src="http://wheelwash.com/uploads/<?php echo $newsitem->image_link; ?>" /></figure>
-          <p><a href="<?php echo base_url('news');?>/show/<?php echo $newsitem->id; ?>"><?php echo $newsitem->title; ?></a><br /><br /><?php echo substr($newsitem->content, 0, 120) . '...'; ?></p>
+          <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $newsitem->image_link; ?>" alt="Wheelwash wheel cleaning solutions - Recent news articles" /></figure>
+          <p><a href="<?php echo base_url('news');?>/show/<?php echo $newsitem->id; ?>" title="Wheelwash wheel cleaning solutions - Recent news articles - <?php echo $newsitem->title; ?>"><?php echo $newsitem->title; ?></a><br /><br /><?php echo substr($newsitem->content, 0, 120) . '...'; ?></p>
           <?php if($v == 5) break; ?>
         </li>
         <?php } ?>

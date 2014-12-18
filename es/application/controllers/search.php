@@ -8,18 +8,11 @@ class Search extends CI_Controller {
 		$this->load->helper('url');
 	}
 	
-	public function index()
+	public function index($search_terms = '', $start = 0)
 	{
 		$this->load->view('header');
 		$this->load->view('search');
 		$this->load->view('footer');	
-	}
-	
-	
-	public function q()
-	{
-		
-		
 	}
 }
 ?>

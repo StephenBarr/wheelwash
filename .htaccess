@@ -1,7 +1,33 @@
 DirectoryIndex index.php
 RewriteEngine on
 
-RewriteCond $1 !^(index\.php|(.*)\.swf|forums|images|css|downloads|jquery|js|robots\.txt|favicon\.ico)
-RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTP:Accept-Language} ^en [NC]
+RewriteRule ^$ http://localhost/wheelwash/en/ [L,R=301]
+
+RewriteCond %{HTTP:Accept-Language} ^es [NC]
+RewriteRule ^$ http://localhost/wheelwash/es/ [L,R=301]
+
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ ./index.php?$1 [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(en|es)/?$ index.php?lang=$1 [QSA,NC,L]
+
+RewriteRule ^uploads/ - [L,NC]
+RewriteRule ^test/ - [L,NC]
+RewriteRule ^css/ - [L,NC]
+RewriteRule ^js/ - [L,NC]
+RewriteRule ^img/ - [L,NC]
+RewriteRule ^sphider/ - [L,NC]
+RewriteRule ^system/ - [L,NC]
+
+# compress text, html, javascript, css, xml:
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript

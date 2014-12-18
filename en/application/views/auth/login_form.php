@@ -38,11 +38,11 @@ $captcha = array(
       <label for="login">Email or login</label>
       <br />
       <input type="text" name="login" value="" id="login" maxlength="80" size="30">
-      <br />
+      <?php echo form_error($login['name']); ?><?php echo isset($errors[$login['name']])?$errors[$login['name']]:''; ?>
       <label for="password">Password</label>
       <br />
       <input type="password" name="password" value="" id="password" size="30">
-      <br />
+      <?php echo form_error($password['name']); ?><?php echo isset($errors[$password['name']])?$errors[$password['name']]:''; ?>
       <input type="checkbox" name="remember" value="1" id="remember">
       <label for="remember">Remember me</label>
       <br />

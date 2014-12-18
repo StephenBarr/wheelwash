@@ -5,7 +5,7 @@
       <h4>High performance compact spray wash system with recycling</h4>
     </div>
     <div class="productright one">
-      <img src="http://wheelwash.com/img/excel-logo.png" />
+      <img src="<?php echo $this->config->item('outside_base_url'); ?>img/excel-logo.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />
     </div>
     <div class="productleft">
       <p><b>The Rhino Ecowash Excel is a reliable and compact high pressure spray wash system that operates automatically. Like all systems in the Rhino Ecowash range, it provides unrivalled reliability and performance. The closed loop system also effectively recycles the water it uses.</b></p>
@@ -16,43 +16,25 @@
     </div>
     <div class="productright">
       <ul>
-        <li><img src='http://wheelwash.com/img/icon-14.png' />BAR</li>
-        <li><img src='http://wheelwash.com/img/icon-11.png' />30 Amps<br />30 Kva</li>
-        <li><img src='http://wheelwash.com/img/icon-1.png' />15,000 L Water Recycling</li>
-        <li><img src='http://wheelwash.com/img/icon-2.png' />1 Revolution</li>
-        <li><img src='http://wheelwash.com/img/icon-6.png' />Mobile</li>
-        <li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li>
-        <li><img src='http://wheelwash.com/img/icon-12.png' />External Sump</li>
-        <li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-14.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />BAR</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-11.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />32 Amps<br />30 Kva</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-1.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />15,000 L Water Recycling</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-2.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />1 REV</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-6.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />Mobile</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-5.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />No Civils</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-12.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />External Sump</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-3.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />No Operator</li>
       </ul>
     </div>
     <div class="line"></div>
-    <div class="productimage"> <img src="http://wheelwash.com/img/excel-1.jpg" /> </div>
+    <div class="productimage"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/excel-1.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" /> </div>
     <div class="specifications">
       <table>
         <tbody>
           <tr>
             <td>Wash Platform</td>
-            <td>4000mm x 3300mm x 415mm<br />
-              2205 Kgs 2650 Litres Capacity</td>
-          </tr>
-          <tr>
-            <td>Ramps**</td>
-            <td>3000mm x 1100mm x 415mm<br />
-              295 Kgs</td>
-          </tr>
-          <tr style="border-bottom:0px">
-            <td>Wash Pump</td>
-            <td>9.4 Kw, 1000 L/min.</td>
-          </tr>
-          <tr>
-            <td>Recovery Pump</td>
-            <td>5.5 Kw, 1000 L/min.</td>
-          </tr>
-          <tr>
-            <td>Settlement Tank</td>
-            <td>6600mm x 2000mm x 1250mm<br />
-              2150 Kgs 15000 Litres Capacity</td>
+            <td>4000mm x 3500mm x 380mm<br />
+              2853Kg, 2650 Litres Capacity</td>
           </tr>
           <tr>
             <td>Side Screens (Each)</td>
@@ -60,8 +42,36 @@
               110 Kgs (each)</td>
           </tr>
           <tr>
+            <td>Ramps**</td>
+            <td>3000mm x 1100mm x 380mm<br />
+              450Kg (each)</td>
+          </tr>
+          <tr>
+            <td>Mobile Road**</td>
+            <td>4000mm x 1100mm x 380mm<br />
+              657Kg (each)</td>
+          </tr>
+          <tr style="border-bottom:0px">
+            <td>Wash Pump</td>
+            <td>9.4 Kw, 1740 L/min.</td>
+          </tr>
+          <tr>
+            <td>Recovery Pump</td>
+            <td>5.5 Kw, 1200 L/min.</td>
+          </tr>
+          <tr>
+            <td>Settlement Tank</td>
+            <td>6600mm x 2000mm x 1250mm<br />
+              2150Kg, 15,000 Litres Capacity</td>
+          </tr>
+          <tr>
+            <td>Sensor</td>
+            <td>Entry sensor, adjustible timed run</td>
+          </tr>
+          <tr>
             <td>Power requirement</td>
-            <td>30amps, 30kva</td>
+            <td>415v, 3 phase<br />
+              32amps, 30kva</td>
           </tr>
         </tbody>
       </table>
@@ -69,12 +79,12 @@
     <div class="line"></div>
     <div class="productbottomleft">
       <ul>
-        <li><img src="http://wheelwash.com/img/excel-2.jpg" />Unique, effective spray design</li>
-        <li><img src="http://wheelwash.com/img/excel-3.jpg" />Surface mounted sump for easy maintenance</li>
-        <li><img src="http://wheelwash.com/img/excel-4.jpg" />Unique washdown<br />Removable grids</li>
-        <li><img src="http://wheelwash.com/img/excel-5.jpg" />Optional mobile road and inset tanks</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/excel-2.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />Unique, effective spray design</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/excel-3.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />Surface mounted sump for easy maintenance</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/excel-4.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />Unique washdown<br />Removable grids</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/excel-5.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />Optional mobile road and inset tanks</li>
       </ul>
-      <a href="Rhino%20Ecowash%20Excel.pdf" class="button download" target="_blank">Download PDF</a> <a href="http://wheelwash.com/en/product" class="button">See all products</a> <a href="http://wheelwash.com/en/contact" class="button">Contact Us</a>
+      <a href="Rhino%20Ecowash%20Excel.pdf" class="button download" target="_blank" title="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel PDF">Download PDF</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>en/product" class="button" title="Wheelwash wheel cleaning solutions - Product Details - View all">See all products</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>en/contact" class="button" title="Wheelwash wheel cleaning solutions - Product Details - Contact information">Contact Us</a>
     </div>
     <div class="productbottomright">
       <h4>Customer Requirements</h4>
@@ -88,7 +98,7 @@
     </div>
     <div class="productbottom">
       <div>
-        <img src="http://wheelwash.com/img/madeinbritain.png" /> <img src="http://wheelwash.com/img/iso.png" />
+        <img src="<?php echo $this->config->item('outside_base_url'); ?>img/madeinbritain.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/iso.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Excel" />
       </div>
       <p>* All weights are approximate dry weights. Wheelwash Limited reserves the right to change detailed specifications from time to time. Drawings are to show indicative layouts only and are not to scale. Specifications are based on supply within the UK, please ask for details outside of this location. Specifications may vary when systems supplied as rental units.<br />
         ** Optional</p>

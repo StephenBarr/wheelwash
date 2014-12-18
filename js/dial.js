@@ -1,14 +1,15 @@
+var mainLink;
 $( document ).ready(function() {
-	 
+	mainLink = $('.main-link').html();
 	var data = [
-		{ label: "extra", data: 12.5, color: "#199b90", h3: "Rhino Ecowash Extra", h6: "High performance spray wash system with recycling", li: "<li><img src='http://wheelwash.com/img/icon-7.png' />Inverter</li><li><img src='http://wheelwash.com/img/icon-9.png' />Operational Costs</li><li><img src='http://wheelwash.com/img/icon-10.png' />4.2 BAR</li><li><img src='http://wheelwash.com/img/icon-11.png' />63 Amps<br />45 Kva</li><li><img src='http://wheelwash.com/img/icon-1.png' />36,000 L Water Recycling</li><li><img src='http://wheelwash.com/img/icon-2.png' />1-2 Revolutions</li><li><img src='http://wheelwash.com/img/icon-6.png' />Mobile</li><li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li><li><img src='http://wheelwash.com/img/icon-12.png' />External Sump</li><li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li>", desc: "<img src='http://wheelwash.com/img/extra-1.jpg' />", circ: "<figure><img src='http://wheelwash.com/img/extra-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Oil Pipeline</figure><figure><img src='http://wheelwash.com/img/extra-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-us.png' class='flag' /><b>USA</b><br />Construction</figure><figure><img src='http://wheelwash.com/img/extra-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-sp.png' class='flag' /><b>Spain</b><br />Landfill</figure>", pdf: "Rhino%20Ecowash%20Extra.pdf" },
-		{ label: "extraclear", data: 12.5, color: "#25b571", h3: "Rhino Extra Clear", h6: "High performance spray wash system with high capacity lamella clarifier for recycling", li: "<li><img src='http://wheelwash.com/img/icon-7.png' />Inverter</li><li><img src='http://wheelwash.com/img/icon-9.png' />Operational Costs</li><li><img src='http://wheelwash.com/img/icon-10.png' />4.2 BAR</li><li><img src='http://wheelwash.com/img/icon-11.png' />63 Amps<br />45 Kva</li><li><img src='http://wheelwash.com/img/icon-1.png' />200m<sup>2</sup> Recycling Capacity</li><li><img src='http://wheelwash.com/img/icon-2.png' />1-2 Revolutions</li><li><img src='http://wheelwash.com/img/icon-6.png' />Mobile</li><li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li><li><img src='http://wheelwash.com/img/icon-12.png' />External Sump</li><li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li>", desc: "<img src='http://wheelwash.com/img/extraclear-1.jpg' />", circ: "<figure><img src='http://wheelwash.com/img/extraclear-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Construction</figure><figure><img src='http://wheelwash.com/img/extraclear-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Construction</figure><figure><img src='http://wheelwash.com/img/extraclear-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Construction</figure>", pdf: "Rhino%20Ecowash%20Extra%20Clear.pdf" },
-		{ label: "extreme", data: 12.5, color: "#73c15d", h3: "Rhino Ecowash Extreme", h6: "High performance spray wash system with high capacity, effective water recycling", li: "<li><img src='http://wheelwash.com/img/icon-7.png' />Inverter</li><li><img src='http://wheelwash.com/img/icon-9.png' />Operational Costs</li><li><img src='http://wheelwash.com/img/icon-8.png' />5 BAR</li><li><img src='http://wheelwash.com/img/icon-11.png' />80 Amps<br />80 Kva</li><li><img src='http://wheelwash.com/img/icon-1.png' />Water Recycling 56,000 L</li><li><img src='http://wheelwash.com/img/icon-2.png' />4 Revolutions</li><li><img src='http://wheelwash.com/img/icon-6.png' />Mobile</li><li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li><li><img src='http://wheelwash.com/img/icon-12.png' />External Sump</li><li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li>", circ: "<figure><img src='http://wheelwash.com/img/extreme-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-sp.png' class='flag' /><b>Spain</b><br />Port</figure><figure><img src='http://wheelwash.com/img/extreme-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Quarry</figure><figure><img src='http://wheelwash.com/img/extreme-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-gr.png' class='flag' /><b>Greece</b><br />Quarry</figure>", desc: "<img src='http://wheelwash.com/img/extreme-1.jpg' />", pdf: "Rhino%20Ecowash%20Extreme.pdf" },
-		{ label: "ecoramp", data: 12.5, color: "#ff6633", h3: "Rhino Ecoramp", h6: "High performance dry ramp system", li: "<li><img src='http://wheelwash.com/img/icon-4.png' />No Power</li><li><img src='http://wheelwash.com/img/icon-15.png' />No Water</li><li><img src='http://wheelwash.com/img/icon-16.png' />Min 5 wheel revolutions</li><li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li><li><img src='http://wheelwash.com/img/icon-6.png' />Mobile</li><li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li>", circ: "<figure><img src='http://wheelwash.com/img/ecoramp-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Quarry</figure><figure><img src='http://wheelwash.com/img/ecoramp-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-fr.png' class='flag' /><b>France</b><br />Remediation</figure><figure><img src='http://wheelwash.com/img/ecoramp-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Construction</figure>", desc: "<img src='http://wheelwash.com/img/ecoramp-1.jpg' />", pdf: "Rhino%20Ecoramp.pdf" },
-		{ label: "ecobath", data: 12.5, color: "#660099", h3: "Rhino Ecobath", h6: "High performance drive through bath system", li: "<li><img src='http://wheelwash.com/img/icon-4.png' />No Power</li><li><img src='http://wheelwash.com/img/icon-15.png' />13,750 litres water capacity</li><li><img src='http://wheelwash.com/img/icon-16.png' />Min 3 wheel revolutions</li><li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li><li><img src='http://wheelwash.com/img/icon-6.png' />Mobile</li><li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li>", circ: "<figure><img src='http://wheelwash.com/img/ecobath-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Construction</figure><figure><img src='http://wheelwash.com/img/ecobath-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-us.png' class='flag' /><b>USA</b><br />Construction</figure><figure><img src='http://wheelwash.com/img/ecobath-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-be.png' class='flag' /><b>Belgium</b><br />Industrial Site</figure>", desc: "<img src='http://wheelwash.com/img/ecobath-1.jpg' />", pdf: "Rhino%20Ecobath.pdf" },
-		{ label: "bespoke", data: 12.5, color: "#999999", h3: "Rhino Bespoke", h6: "Any of the Ecowash Range can be made bespoke to your requirements", li: "<li><img src='http://wheelwash.com/img/icon-7.png' />Inverter</li><li><img src='http://wheelwash.com/img/icon-9.png' />Operational Costs</li><li><img src='http://wheelwash.com/img/icon-17.png' />High BAR</li><li><img src='http://wheelwash.com/img/icon-11.png' />Low Power</li><li><img src='http://wheelwash.com/img/icon-1.png' />Optional Water Recycling</li><li><img src='http://wheelwash.com/img/icon-2.png' />Various Wheel Revolutions</li><li><img src='http://wheelwash.com/img/icon-6.png' />Mobile</li><li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li><li><img src='http://wheelwash.com/img/icon-12.png' />External Sump</li><li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li>", circ: "<figure><img src='http://wheelwash.com/img/bespoke-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Landfill Site</figure><figure><img src='http://wheelwash.com/img/bespoke-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-au.png' class='flag' /><b>Australia</b><br />Quarry</figure><figure><img src='http://wheelwash.com/img/bespoke-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Quarry</figure>", desc: "", pdf: "#" },
-		{ label: "express", data: 12.5, color: "#31559d", h3: "Rhino Ecowash Express", h6: "High performance compact spray wash system with recycling", li: "<li><img src='http://wheelwash.com/img/icon-13.png' />1.5 BAR</li><li><img src='http://wheelwash.com/img/icon-11.png' />32 Amps<br />20 Kva</li><li><img src='http://wheelwash.com/img/icon-1.png' />4,000 L Water Recycling</li><li><img src='http://wheelwash.com/img/icon-6.png' />Mobile<li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li><li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li><li><img src='http://wheelwash.com/img/icon-12.png' />External Sump</li>", circ: "<figure><img src='http://wheelwash.com/img/express-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Bovine Insemination Facility</figure><figure><img src='http://wheelwash.com/img/express-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-su.png' class='flag' /><b>Suriname</b><br />Mine</figure><figure><img src='http://wheelwash.com/img/express-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-sp.png' class='flag' /><b>Spain</b><br />Construction</figure>", desc: "<img src='http://wheelwash.com/img/express-1.jpg' />", pdf: "Rhino%20Ecowash%20Express.pdf" },
-		{ label: "excel", data: 12.5, color: "#247aa2", h3: "Rhino Ecowash Excel", h6: "High performance compact spray wash system with recycling", li: "<li><img src='http://wheelwash.com/img/icon-14.png' />BAR</li><li><img src='http://wheelwash.com/img/icon-11.png' />30 Amps<br />30 Kva</li><li><img src='http://wheelwash.com/img/icon-1.png' />15,000 L Water Recycling</li><li><img src='http://wheelwash.com/img/icon-2.png' />1 Revolution</li><li><img src='http://wheelwash.com/img/icon-6.png' />Mobile</li><li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li><li><img src='http://wheelwash.com/img/icon-12.png' />External Sump</li><li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li>", circ: "<figure><img src='http://wheelwash.com/img/excel-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>UK</b><br />Landfill Site</figure><figure><img src='http://wheelwash.com/img/excel-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-au.png' class='flag' /><b>Australia</b><br />Construction Site</figure><figure><img src='http://wheelwash.com/img/excel-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-us.png' class='flag' /><b>USA</b><br />Construction</figure>", desc: "<img src='http://wheelwash.com/img/excel-1.jpg' />", pdf: "Rhino%20Ecowash%20Excel.pdf" }
+		{ label: "extra", data: 12.5, color: "#199b90", h3: "Rhino Ecowash Extra", h6: "High performance spray wash system with recycling", li: "<li><img src='"+mainLink+"img/icon-7.png' />Inverter</li><li><img src='"+mainLink+"img/icon-9.png' />Operational Costs</li><li><img src='"+mainLink+"img/icon-10.png' />4.2 BAR</li><li><img src='"+mainLink+"img/icon-11.png' />63 Amps<br />45 Kva</li><li><img src='"+mainLink+"img/icon-1.png' />36,000 L Water Recycling</li><li><img src='"+mainLink+"img/icon-2.png' />1-2 Revolutions</li><li><img src='"+mainLink+"img/icon-6.png' />Mobile</li><li><img src='"+mainLink+"img/icon-5.png' />No Civils</li><li><img src='"+mainLink+"img/icon-12.png' />External Sump</li><li><img src='"+mainLink+"img/icon-3.png' />No Operator</li>", desc: "<img src='"+mainLink+"img/extra-1.jpg' />", circ: "<figure><img src='"+mainLink+"img/extra-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Oil Pipeline</figure><figure><img src='"+mainLink+"img/extra-circle-2.jpg' /><img src='"+mainLink+"img/flag-us.png' class='flag' /><b>USA</b><br />Construction</figure><figure><img src='"+mainLink+"img/extra-circle-3.jpg' /><img src='"+mainLink+"img/flag-sp.png' class='flag' /><b>Spain</b><br />Landfill</figure>", pdf: "Rhino%20Ecowash%20Extra.pdf" },
+		{ label: "extraclear", data: 12.5, color: "#25b571", h3: "Rhino Extra Clear", h6: "High performance spray wash system with high capacity lamella clarifier for recycling", li: "<li><img src='"+mainLink+"img/icon-7.png' />Inverter</li><li><img src='"+mainLink+"img/icon-9.png' />Operational Costs</li><li><img src='"+mainLink+"img/icon-10.png' />4.2 BAR</li><li><img src='"+mainLink+"img/icon-11.png' />63 Amps<br />45 Kva</li><li><img src='"+mainLink+"img/icon-1.png' />200m<sup>2</sup> Recycling Capacity</li><li><img src='"+mainLink+"img/icon-2.png' />1-2 Revolutions</li><li><img src='"+mainLink+"img/icon-6.png' />Mobile</li><li><img src='"+mainLink+"img/icon-5.png' />No Civils</li><li><img src='"+mainLink+"img/icon-12.png' />External Sump</li><li><img src='"+mainLink+"img/icon-3.png' />No Operator</li>", desc: "<img src='"+mainLink+"img/extraclear-1.jpg' />", circ: "<figure><img src='"+mainLink+"img/extraclear-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Construction</figure><figure><img src='"+mainLink+"img/extraclear-circle-2.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Construction</figure><figure><img src='"+mainLink+"img/extraclear-circle-3.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Construction</figure>", pdf: "Rhino%20Ecowash%20Extra%20Clear.pdf" },
+		{ label: "extreme", data: 12.5, color: "#73c15d", h3: "Rhino Ecowash Extreme", h6: "High performance spray wash system with high capacity, effective water recycling", li: "<li><img src='"+mainLink+"img/icon-7.png' />Inverter</li><li><img src='"+mainLink+"img/icon-9.png' />Operational Costs</li><li><img src='"+mainLink+"img/icon-8.png' />5 BAR</li><li><img src='"+mainLink+"img/icon-11.png' />80 Amps<br />80 Kva</li><li><img src='"+mainLink+"img/icon-1.png' />Water Recycling 56,000 L</li><li><img src='"+mainLink+"img/icon-2.png' />4 Revolutions</li><li><img src='"+mainLink+"img/icon-6.png' />Mobile</li><li><img src='"+mainLink+"img/icon-5.png' />No Civils</li><li><img src='"+mainLink+"img/icon-12.png' />External Sump</li><li><img src='"+mainLink+"img/icon-3.png' />No Operator</li>", circ: "<figure><img src='"+mainLink+"img/extreme-circle-1.jpg' /><img src='"+mainLink+"img/flag-sp.png' class='flag' /><b>Spain</b><br />Port</figure><figure><img src='"+mainLink+"img/extreme-circle-2.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Quarry</figure><figure><img src='"+mainLink+"img/extreme-circle-3.jpg' /><img src='"+mainLink+"img/flag-gr.png' class='flag' /><b>Greece</b><br />Quarry</figure>", desc: "<img src='"+mainLink+"img/extreme-1.jpg' />", pdf: "Rhino%20Ecowash%20Extreme.pdf" },
+		{ label: "ecoramp", data: 12.5, color: "#ff6633", h3: "Rhino Ecoramp", h6: "High performance dry ramp system", li: "<li><img src='"+mainLink+"img/icon-4.png' />No Power</li><li><img src='"+mainLink+"img/icon-15.png' />No Water</li><li><img src='"+mainLink+"img/icon-16.png' />Min 5 wheel revolutions</li><li><img src='"+mainLink+"img/icon-3.png' />No Operator</li><li><img src='"+mainLink+"img/icon-6.png' />Mobile</li><li><img src='"+mainLink+"img/icon-5.png' />No Civils</li>", circ: "<figure><img src='"+mainLink+"img/ecoramp-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Quarry</figure><figure><img src='"+mainLink+"img/ecoramp-circle-2.jpg' /><img src='"+mainLink+"img/flag-fr.png' class='flag' /><b>France</b><br />Remediation</figure><figure><img src='"+mainLink+"img/ecoramp-circle-3.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Construction</figure>", desc: "<img src='"+mainLink+"img/ecoramp-1.jpg' />", pdf: "Rhino%20Ecoramp.pdf" },
+		{ label: "ecobath", data: 12.5, color: "#660099", h3: "Rhino Ecobath", h6: "High performance drive through bath system", li: "<li><img src='"+mainLink+"img/icon-4.png' />No Power</li><li><img src='"+mainLink+"img/icon-15.png' />13,750 litres water capacity</li><li><img src='"+mainLink+"img/icon-16.png' />Min 3 wheel revolutions</li><li><img src='"+mainLink+"img/icon-3.png' />No Operator</li><li><img src='"+mainLink+"img/icon-6.png' />Mobile</li><li><img src='"+mainLink+"img/icon-5.png' />No Civils</li>", circ: "<figure><img src='"+mainLink+"img/ecobath-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Construction</figure><figure><img src='"+mainLink+"img/ecobath-circle-2.jpg' /><img src='"+mainLink+"img/flag-us.png' class='flag' /><b>USA</b><br />Construction</figure><figure><img src='"+mainLink+"img/ecobath-circle-3.jpg' /><img src='"+mainLink+"img/flag-be.png' class='flag' /><b>Belgium</b><br />Industrial Site</figure>", desc: "<img src='"+mainLink+"img/ecobath-1.jpg' />", pdf: "Rhino%20Ecobath.pdf" },
+		{ label: "bespoke", data: 12.5, color: "#999999", h3: "Rhino Bespoke", h6: "Any of the Ecowash Range can be made bespoke to your requirements", li: "<li><img src='"+mainLink+"img/icon-7.png' />Inverter</li><li><img src='"+mainLink+"img/icon-9.png' />Operational Costs</li><li><img src='"+mainLink+"img/icon-17.png' />High BAR</li><li><img src='"+mainLink+"img/icon-11.png' />Low Power</li><li><img src='"+mainLink+"img/icon-1.png' />Optional Water Recycling</li><li><img src='"+mainLink+"img/icon-2.png' />Various Wheel Revolutions</li><li><img src='"+mainLink+"img/icon-6.png' />Mobile</li><li><img src='"+mainLink+"img/icon-5.png' />No Civils</li><li><img src='"+mainLink+"img/icon-12.png' />External Sump</li><li><img src='"+mainLink+"img/icon-3.png' />No Operator</li>", circ: "<figure><img src='"+mainLink+"img/bespoke-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Landfill Site</figure><figure><img src='"+mainLink+"img/bespoke-circle-2.jpg' /><img src='"+mainLink+"img/flag-au.png' class='flag' /><b>Australia</b><br />Quarry</figure><figure><img src='"+mainLink+"img/bespoke-circle-3.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Quarry</figure>", desc: "", pdf: "#" },
+		{ label: "express", data: 12.5, color: "#31559d", h3: "Rhino Ecowash Express", h6: "High performance compact spray wash system with recycling", li: "<li><img src='"+mainLink+"img/icon-13.png' />1.5 BAR</li><li><img src='"+mainLink+"img/icon-11.png' />32 Amps<br />20 Kva</li><li><img src='"+mainLink+"img/icon-1.png' />4,000 L Water Recycling</li><li><img src='"+mainLink+"img/icon-6.png' />Mobile<li><img src='"+mainLink+"img/icon-5.png' />No Civils</li><li><img src='"+mainLink+"img/icon-3.png' />No Operator</li><li><img src='"+mainLink+"img/icon-12.png' />External Sump</li>", circ: "<figure><img src='"+mainLink+"img/express-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Bovine Insemination Facility</figure><figure><img src='"+mainLink+"img/express-circle-2.jpg' /><img src='"+mainLink+"img/flag-su.png' class='flag' /><b>Suriname</b><br />Mine</figure><figure><img src='"+mainLink+"img/express-circle-3.jpg' /><img src='"+mainLink+"img/flag-sp.png' class='flag' /><b>Spain</b><br />Construction</figure>", desc: "<img src='"+mainLink+"img/express-1.jpg' />", pdf: "Rhino%20Ecowash%20Express.pdf" },
+		{ label: "excel", data: 12.5, color: "#247aa2", h3: "Rhino Ecowash Excel", h6: "High performance compact spray wash system with recycling", li: "<li><img src='"+mainLink+"img/icon-14.png' />BAR</li><li><img src='"+mainLink+"img/icon-11.png' />30 Amps<br />30 Kva</li><li><img src='"+mainLink+"img/icon-1.png' />15,000 L Water Recycling</li><li><img src='"+mainLink+"img/icon-2.png' />1 Revolution</li><li><img src='"+mainLink+"img/icon-6.png' />Mobile</li><li><img src='"+mainLink+"img/icon-5.png' />No Civils</li><li><img src='"+mainLink+"img/icon-12.png' />External Sump</li><li><img src='"+mainLink+"img/icon-3.png' />No Operator</li>", circ: "<figure><img src='"+mainLink+"img/excel-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>UK</b><br />Landfill Site</figure><figure><img src='"+mainLink+"img/excel-circle-2.jpg' /><img src='"+mainLink+"img/flag-au.png' class='flag' /><b>Australia</b><br />Construction Site</figure><figure><img src='"+mainLink+"img/excel-circle-3.jpg' /><img src='"+mainLink+"img/flag-us.png' class='flag' /><b>USA</b><br />Construction</figure>", desc: "<img src='"+mainLink+"img/excel-1.jpg' />", pdf: "Rhino%20Ecowash%20Excel.pdf" }
 	];
 	
 	var plot = $.plot('#dial', data, {
@@ -57,8 +58,8 @@ $( document ).ready(function() {
 	$('#dial').bind('plothover', pieHover);
 	$('#dial').bind('plotclick', pieClick);
 	
-	$('.flot-base').after('<div class="product-names"><img src="http://wheelwash.com/img/product-names.png" /></div>');
-	$('.flot-base').after('<div id="flot-needle"><img src="http://wheelwash.com/img/needle.png" /></div>');
+	$('.flot-base').after('<div class="product-names"><img src="'+mainLink+'img/product-names.png" /></div>');
+	$('.flot-base').after('<div id="flot-needle"><img src="'+mainLink+'img/needle.png" /></div>');
 	
 	$('#flot-needle img').css({ WebkitTransform: 'rotate(43deg)'});
     $('#flot-needle img').css({ '-moz-transform': 'rotate(43deg)'});
@@ -182,9 +183,9 @@ function slideProductIn(obj) {
 					$(element).stop().delay(200*i).animate({'opacity': 1}, 200);	
 				});
 				if(obj.series.label == 'bespoke') {
-					$('.dial-below .circ').empty().after('<a href="http://wheelwash.com/product/'+obj.series.label+'" class="moreinfo button">Click here for more information</a><a href="#" class="contct button">Contact</a>').css('opacity', '1');
+					$('.dial-below .circ').empty().after('<a href="'+mainLink+'product/'+obj.series.label+'" class="moreinfo button">Click here for more information</a><a href="#" class="contct button">Contact</a>').css('opacity', '1');
 				} else {
-					$('.dial-below .circ').empty().after('<a href="'+obj.series.pdf+'" class="download button" target="_blank">Download PDF File</a><a href="http://wheelwash.com/product/'+obj.series.label+'" class="moreinfo button">Click here for more information</a><a href="#" class="contct button">Contact</a>').css('opacity', '1');
+					$('.dial-below .circ').empty().after('<a href="'+obj.series.pdf+'" class="download button" target="_blank">Download PDF File</a><a href="'+mainLink+'product/'+obj.series.label+'" class="moreinfo button">Click here for more information</a><a href="#" class="contct button">Contact</a>').css('opacity', '1');
 				}
 				$(obj.series.circ).each(function(i, element) {
 					preload($(element).find('img').attr('src'));
@@ -259,7 +260,7 @@ function pdform() {
 			},
 			submitHandler: function( form ) {
 				$.ajax({
-					url : 'http://wheelwash.com/contact/download/' + filename,
+					url : mainLink+'contact/download/' + filename,
 					data : $('.pdform').serialize(),
 					type: 'POST',
 					success : function(data) {
@@ -327,7 +328,7 @@ function contactBox() {
 				  
 				  submitHandler: function( form ) {   
 						$.ajax({
-							url : 'http://wheelwash.com/contact/message',
+							url : mainLink+'contact/message',
 							data : $('.contactform').serialize(),
 							type: 'POST',
 							success : function(data) {
@@ -351,24 +352,24 @@ var cir = 0;
 function circularExcel() {
 	if(cir == 0) {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-us.png" class="flag" /><b>USA</b><br>Construction Site').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-4.jpg" /><img src="'+mainLink+'img/flag-us.png" class="flag" /><b>USA</b><br>Construction Site').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-5.jpg" /><img src="http://wheelwash.com/img/flag-ch.png" class="flag" /><b>Chile</b><br>Copper Smelting Plant').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-5.jpg" /><img src="'+mainLink+'img/flag-ch.png" class="flag" /><b>Chile</b><br>Copper Smelting Plant').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-6.jpg" /><img src="http://wheelwash.com/img/flag-ho.png" class="flag" /><b>Holland</b><br>Port').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-6.jpg" /><img src="'+mainLink+'img/flag-ho.png" class="flag" /><b>Holland</b><br>Port').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 1;
 	} else {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br>Landfill Site').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-1.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br>Landfill Site').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-3.jpg" /><img src="http://wheelwash.com/img/flag-au.png" class="flag" /><b>Australia</b><br>Construction Site').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-3.jpg" /><img src="'+mainLink+'img/flag-au.png" class="flag" /><b>Australia</b><br>Construction Site').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-us.png" class="flag" /><b>USA</b><br>Construction Site').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-4.jpg" /><img src="'+mainLink+'img/flag-us.png" class="flag" /><b>USA</b><br>Construction Site').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 0;
 	}
@@ -376,24 +377,24 @@ function circularExcel() {
 function circularExtreme() {
 	if(cir == 0) {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-sp.png" class="flag" /><b>Spain</b><br>Quarry').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-4.jpg" /><img src="'+mainLink+'img/flag-sp.png" class="flag" /><b>Spain</b><br>Quarry').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-5.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br>Inert Recycling').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-5.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br>Inert Recycling').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-6.jpg" /><img src="http://wheelwash.com/img/flag-sp.png" class="flag" /><b>Spain</b><br>Quarry').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-6.jpg" /><img src="'+mainLink+'img/flag-sp.png" class="flag" /><b>Spain</b><br>Quarry').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 1;
 	} else {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-sp.png" class="flag" /><b>Spain</b><br>Port').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-1.jpg" /><img src="'+mainLink+'img/flag-sp.png" class="flag" /><b>Spain</b><br>Port').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-2.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br>Quarry').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-2.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br>Quarry').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-3.jpg" /><img src="http://wheelwash.com/img/flag-gr.png" class="flag" /><b>Greece</b><br>Quarry').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-3.jpg" /><img src="'+mainLink+'img/flag-gr.png" class="flag" /><b>Greece</b><br>Quarry').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 0;
 	}
@@ -401,24 +402,24 @@ function circularExtreme() {
 function circularEcobath() {
 	if(cir == 0) {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br>Infrastructure').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-4.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br>Infrastructure').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-5.jpg" /><img src="http://wheelwash.com/img/flag-au.png" class="flag" /><b>Australia</b><br>Landfill Site').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-5.jpg" /><img src="'+mainLink+'img/flag-au.png" class="flag" /><b>Australia</b><br>Landfill Site').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-6.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br>Construction').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-6.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br>Construction').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 1;
 	} else {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br>Construction').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-1.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br>Construction').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-2.jpg" /><img src="http://wheelwash.com/img/flag-us.png" class="flag" /><b>USA</b><br>Construction').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-2.jpg" /><img src="'+mainLink+'img/flag-us.png" class="flag" /><b>USA</b><br>Construction').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-3.jpg" /><img src="http://wheelwash.com/img/flag-be.png" class="flag" /><b>Belgium</b><br>Industrial Site').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-3.jpg" /><img src="'+mainLink+'img/flag-be.png" class="flag" /><b>Belgium</b><br>Industrial Site').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 0;
 	}
@@ -441,24 +442,24 @@ function circularRotation() {
 function circularBespoke() {
 	if(cir == 0) {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br />Mine').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-4.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br />Mine').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-5.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br />Port').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-5.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br />Port').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br />Landfill Site').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-1.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br />Landfill Site').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 1;
 	} else {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br />Landfill Site').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-1.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br />Landfill Site').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-2.jpg" /><img src="http://wheelwash.com/img/flag-au.png" class="flag" /><b>Australia</b><br />Quarry').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-2.jpg" /><img src="'+mainLink+'img/flag-au.png" class="flag" /><b>Australia</b><br />Quarry').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-3.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br />Quarry').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-3.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br />Quarry').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 0;
 	}
@@ -466,24 +467,24 @@ function circularBespoke() {
 function circularExtra() {
 	if(cir == 0) {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br />Quarry & Landfill').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-4.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br />Quarry & Landfill').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-5.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br />Construction').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-5.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br />Construction').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-6.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br />Quarry').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-6.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br />Quarry').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 1;
 	} else {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>UK</b><br />Oil Pipeline').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-1.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>UK</b><br />Oil Pipeline').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-2.jpg" /><img src="http://wheelwash.com/img/flag-us.png" class="flag" /><b>USA</b><br />Construction').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-2.jpg" /><img src="'+mainLink+'img/flag-us.png" class="flag" /><b>USA</b><br />Construction').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-3.jpg" /><img src="http://wheelwash.com/img/flag-sp.png" class="flag" /><b>Spain</b><br />Landfill').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-3.jpg" /><img src="'+mainLink+'img/flag-sp.png" class="flag" /><b>Spain</b><br />Landfill').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 0;
 	}

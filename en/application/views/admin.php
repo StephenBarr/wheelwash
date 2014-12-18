@@ -17,7 +17,7 @@
     <div class="item" id="<?php echo $newsitem->id; ?>"> <a href="#" class="delete"><i class="fa fa-times"></i></a>
       <h3><?php echo $newsitem->title; ?><span><?php echo substr($newsitem->modified_date, 0, 10); ?></span></h3>
       <div class="content"><?php echo $newsitem->content; ?></div>
-      <div class="image" style="display:none;"><img src="http://wheelwash.com/uploads/<?php echo $newsitem->image_link; ?>" /></div>
+      <div class="image" style="display:none;"><img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $newsitem->image_link; ?>" /></div>
     </div>
     <?php } ?>
   </div>
@@ -29,8 +29,8 @@
     <div class="item" id="<?php echo $case->id; ?>"> <a href="#" class="delete"><i class="fa fa-times"></i></a>
       <h3><?php echo $case->title; ?><span><?php echo substr($case->modified_date, 0, 10); ?></span></h3>
       <div class="content"><?php echo $case->content; ?></div>
-      <div class="image" style="display:none;"><img src="http://wheelwash.com/uploads/<?php echo $case->image_link; ?>" /></div>
-      <div class="circle" style="display:none;"><img src="http://wheelwash.com/uploads/<?php echo $case->circle_image_1; ?>" /> <img src="http://wheelwash.com/uploads/<?php echo $case->circle_image_2; ?>" /> <img src="http://wheelwash.com/uploads/<?php echo $case->circle_image_3; ?>" /></div>
+      <div class="image" style="display:none;"><img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $case->image_link; ?>" /></div>
+      <div class="circle" style="display:none;"><img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $case->circle_image_1; ?>" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $case->circle_image_2; ?>" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $case->circle_image_3; ?>" /></div>
     </div>
     <?php } ?>
   </div>
@@ -41,12 +41,12 @@
     <?php foreach ($slides as $slide) { ?>
     <div class="slides-<?php echo $slide->name; ?> image-container">
       <form class="<?php echo $slide->name; ?>">
-          <figure> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_1; ?>" /> <input type="file" name="image_link_1" class="image_link_1" /> <i class="fa fa-external-link fa-2x"></i> </figure>
-          <figure> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_2; ?>" /> <input type="file" name="image_link_2" class="image_link_2" /> <i class="fa fa-external-link fa-2x"></i> </figure>
-          <figure> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_3; ?>" /> <input type="file" name="image_link_3" class="image_link_3" /> <i class="fa fa-external-link fa-2x"></i> </figure>
-          <figure> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_4; ?>" /> <input type="file" name="image_link_4" class="image_link_4" /> <i class="fa fa-external-link fa-2x"></i> </figure>
-          <figure> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_5; ?>" /> <input type="file" name="image_link_5" class="image_link_5" /> <i class="fa fa-external-link fa-2x"></i> </figure>
-          <figure> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_6; ?>" /> <input type="file" name="image_link_6" class="image_link_6" /> <i class="fa fa-external-link fa-2x"></i> </figure>
+          <figure> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_1; ?>" /> <input type="file" name="image_link_1" class="image_link_1" /> <i class="fa fa-external-link fa-2x"></i> </figure>
+          <figure> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_2; ?>" /> <input type="file" name="image_link_2" class="image_link_2" /> <i class="fa fa-external-link fa-2x"></i> </figure>
+          <figure> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_3; ?>" /> <input type="file" name="image_link_3" class="image_link_3" /> <i class="fa fa-external-link fa-2x"></i> </figure>
+          <figure> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_4; ?>" /> <input type="file" name="image_link_4" class="image_link_4" /> <i class="fa fa-external-link fa-2x"></i> </figure>
+          <figure> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_5; ?>" /> <input type="file" name="image_link_5" class="image_link_5" /> <i class="fa fa-external-link fa-2x"></i> </figure>
+          <figure> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_6; ?>" /> <input type="file" name="image_link_6" class="image_link_6" /> <i class="fa fa-external-link fa-2x"></i> </figure>
       </form>
     </div>
     <?php } ?>

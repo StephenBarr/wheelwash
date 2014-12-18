@@ -5,7 +5,7 @@
       <h4>Sistema de lavado de alto rendimiento por aspersión con sistema de recirculación de agua</h4>
     </div>
     <div class="productright one">
-      <img src="http://wheelwash.com/img/express-logo.png" />
+      <img src="<?php echo $this->config->item('outside_base_url'); ?>img/express-logo.png" />
     </div>
     <div class="productleft">
       <p><b>El Rhino Ecowash Express es el más pequeño de los sistemas de lavado por aspersión de agua a alta presión. Diseñado para los espacios más reducidos, como todos los sistemas de la gama Rhino Ecowash, proporciona un rendimiento sin igual y una elevada fiabilidad. Su modelo de operación en circuito cerrado permite la máxima reutilización del agua.</b></p>
@@ -17,55 +17,61 @@
     </div>
     <div class="productright">
       <ul>
-        <li><img src="http://wheelwash.com/img/icon-13.png" />1.5 BAR</li>
-        <li><img src="http://wheelwash.com/img/icon-11.png" />32 Amps<br />20 Kva</li>
-        <li><img src="http://wheelwash.com/img/icon-1.png" />4,000 L reciclaje de agua</li>
-        <li><img src="http://wheelwash.com/img/icon-6.png" />Movil</li>
-        <li><img src="http://wheelwash.com/img/icon-5.png" />No requiere obra civil</li>
-        <li style="border-bottom-width:9px;border-style:solid"><img src="http://wheelwash.com/img/icon-3.png" />Funcionamiento automático</li>
-        <li><img src="http://wheelwash.com/img/icon-12.png" />Sumidero externo</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-13.png" />1.5 BAR</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-11.png" />32 Amps<br />20 Kva</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-1.png" />4,000 L reciclaje de agua</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-6.png" />Movil</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-5.png" />No requiere obra civil</li>
+        <li style="border-bottom-width:9px;border-style:solid"><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-3.png" />Funcionamiento automático</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-12.png" />Sumidero externo</li>
       </ul>
     </div>
     <div class="line"></div>
-    <div class="productimage"> <img src="http://wheelwash.com/img/express-1.jpg" /> </div>
+    <div class="productimage"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/express-1.jpg" /> </div>
     <div class="specifications">
       <table>
         <tbody>
           <tr>
             <td>Plataforma de lavado</td>
-            <td>2000mm x 3300mm x 415mm<br />
-              2205 Kgs 2650 Litros Capacidad</td>
+            <td>2000mm x 3500mm x 380mm<br />
+              1425Kg, 1325 Litros de capacidad</td>
           </tr>
           <tr>
             <td>Pantallas laterales</td>
             <td>1 de / 2000mm x 2000mm x 4.3mm<br />
-              opcional segunda pantalla</td>
+              opcional segunda pantalla, 7-kg</td>
           </tr>
           <tr style="border-bottom:0px">
             <td>Rampas**</td>
-            <td>3000mm x 1100mm x 415mm</td>
+            <td>3000mm x 1100mm x 380mm<br />
+              450Kg (cada una)</td>
           </tr>
           <tr>
             <td>Tramos móviles**</td>
-            <td>3000mm x 1100mm x 415mm</td>
+            <td>4000mm x 1100mm x 380mm<br />
+              657Kg (cada una)</td>
           </tr>
           <tr style="border-bottom:0px">
-            <td>Wash Pump</td>
-            <td>3.7 kw 1100 L/min.</td>
+            <td>Bomba Lavado</td>
+            <td>3.9 kw 1100 L/min.</td>
           </tr>
           <tr>
-            <td>Recovery Pump</td>
-            <td>3.7 kw 960 L/min.</td>
+            <td>Bomba Lodos</td>
+            <td>3.4 kw 860 L/min.</td>
           </tr>
           <tr>
             <td>Depósito de sedimentación</td>
             <td>2000mm x 2000mm x 1000mm<br />
-              4000 Litros Capacidad</td>
+              554kg, 4000 Litros de Capacidad</td>
+          </tr>
+          <tr>
+            <td>Sensor de entrada</td>
+            <td>Tiempo de lavado configurable</td>
           </tr>
           <tr>
             <td>Se requiere energía</td>
-            <td>32amps, 20kva<br />
-               415V, 50Hz</td>
+            <td>415V, 50Hz<br />
+               32 A, 20kva</td>
           </tr>
         </tbody>
       </table>
@@ -73,12 +79,12 @@
     <div class="line"></div>
     <div class="productbottomleft">
       <ul>
-        <li><img src="http://wheelwash.com/img/express-2.jpg" />Potente, un lavado preciso</li>
-        <li><img src="http://wheelwash.com/img/express-3.jpg" />Sumidero integrado ahorra espacio</li>
-        <li><img src="http://wheelwash.com/img/express-4.jpg" />Pantalla lateral de doble propósitoahorra espacio</li>
-        <li><img src="http://wheelwash.com/img/express-5.jpg" />Pantalla lateral adicional y opcional en el caso del reciclado</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/express-2.jpg" />Potente, un lavado preciso</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/express-3.jpg" />Sumidero integrado ahorra espacio</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/express-4.jpg" />Pantalla lateral de doble propósitoahorra espacio</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/express-5.jpg" />Pantalla lateral adicional y opcional en el caso del reciclado</li>
       </ul>
-      <a href="Rhino%20Ecowash%20Express.pdf" class="button download" target="_blank">Descargar ficha técnica en .pdf</a> <a href="http://wheelwash.com/es/product" class="button">Haga clic aquí para más información</a> <a href="http://wheelwash.com/es/contact" class="button">Contactar</a>
+      <a href="Rhino%20Ecowash%20Express.pdf" class="button download" target="_blank">Descargar ficha técnica en .pdf</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>es/product" class="button">Haga clic aquí para más información</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>es/contact" class="button">Contactar</a>
     </div>
     <div class="productbottomright">
       <h4>Requisitos del cliente</h4>
@@ -91,7 +97,7 @@
       </ul>
     </div>
     <div class="productbottom">
-      <div> <img src="http://wheelwash.com/img/madeinbritain.png" /> <img src="http://wheelwash.com/img/iso.png" /> </div>
+      <div> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/madeinbritain.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/iso.png" /> </div>
       <p>* Todos los pesos son aproximados y de las piezas secas. Wheelwash Limited se reserva el derecho de cambiar las especificaciones detalladas. Los dibujos son para mostrar los diseños y no se encuentran a escala.
 Las especificaciones se basan en los modelos disponibles para el Reino Unido, por favor pregunte por los detalles fuera de esta ubicación. Las especificaciones pueden variar cuando se suministran equipos de alquiler.<br />
         ** Opcional 4 rampas<br />

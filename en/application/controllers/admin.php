@@ -30,7 +30,9 @@ class Admin extends CI_Controller {
 			$data['user_id'] = $this->tank_auth->get_user_id();
 			$data['username'] = $this->tank_auth->get_username();
 			
-			$this->load->view('header');
+			$data['title'] = 'Adminstration';
+			$data['description'] = '';
+			$this->load->view('header', $data);
 			$this->load->view('admin', $data);
 			$this->load->view('footer');
 		}	

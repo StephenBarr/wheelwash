@@ -1,5 +1,6 @@
 $( document ).ready(function() {
-
+	var mainLink = $('.main-link').html();
+	$.cookieBar({bottom: true, fixed: true});
 // Navigation Menu
 	var menu = 0;
 	$('.mobile-button').click(function() {
@@ -236,7 +237,7 @@ $( document ).ready(function() {
 					$('.map-info').find('.title').html('Canada');
 					$('.map-left').find('img').replaceWith('<img src="img/space.jpg" />');
 					$('.map-left').find('.name').html('Benjamin Taylor');
-					$('.map-left').find('.tel').html('<b>T:</b> +(1) 732 921 7934<br /><b>F:</b> +(1) 732 403 8012<br /><b>E:</b><a href="mailto:btaylor@wheelwash.com"> btaylor@wheelwash.com</a>');
+					$('.map-left').find('.tel').html('<b>T:</b> +(1) 732 921 7934<br /><b>F:</b> +(1) 732 403 8012<br /><b>E:</b><a href="mailto:btaylor@wheelwash.us.com"> btaylor@wheelwash.us.com</a>');
 					$('.map-left').find('.addr').html(addr);
 					
 					$('.map-info').animate({'opacity': 0}, 500, function() {
@@ -254,7 +255,7 @@ $( document ).ready(function() {
 					$('.map-info').find('.title').html('North America');
 					$('.map-left').find('img').replaceWith('<img src="img/space.jpg" />');
 					$('.map-left').find('.name').html('Benjamin Taylor');
-					$('.map-left').find('.tel').html('<b>T:</b> +(1) 732 921 7934<br /><b>F:</b> +(1) 732 403 8012<br /><b>E:</b><a href="mailto:btaylor@wheelwash.com"> btaylor@wheelwash.com</a>');
+					$('.map-left').find('.tel').html('<b>T:</b> +(1) 732 921 7934<br /><b>F:</b> +(1) 732 403 8012<br /><b>E:</b><a href="mailto:btaylor@wheelwash.us.com"> btaylor@wheelwash.us.com</a>');
 					$('.map-left').find('.addr').html(addr);
 					
 					$('.map-info').animate({'opacity': 0}, 500, function() {
@@ -484,7 +485,7 @@ $( document ).ready(function() {
 		  submitHandler: function( form ) {
 			   
 				$.ajax({
-					url : 'http://wheelwash.com/contact/message',
+					url : mainLink+'contact/message',
 					data : $('.contactform').serialize(),
 					type: "POST",
 					success : function(data){
@@ -551,7 +552,7 @@ $( document ).ready(function() {
 			},
 			submitHandler: function( form ) {
 				$.ajax({
-					url : 'http://wheelwash.com/en/contact/download/' + filename,
+					url : mainLink+'en/contact/download/' + filename,
 					data : $('.pdform').serialize(),
 					type: 'POST',
 					success : function(data) {

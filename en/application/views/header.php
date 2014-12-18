@@ -8,29 +8,32 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Wheel Cleaning Solutions</title>
-<meta name="description" content="">
+<title>Wheel Cleaning Solutions | <?php echo $title;
+	if($this->uri->segment(2) == 'show') {
+		if($this->uri->segment(1) == 'casestudies') {
+			echo ' | ' . $case['title'];
+		} else if($this->uri->segment(1) == 'news') {
+			echo ' | ' . $news['title'];
+		}
+	} ?></title>
+<meta name="description" content="<?php echo $description; ?>">
+<meta name="keywords" content="wheel washing cleaning solutions ecowash ecobath ecoramp ecoclear extra clear excel express bespoke agriwash international canada north america chile britain netherland ireland sweden norway aurstralia newzealand israel germany spain bath recycling ramp construction spray global">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="http://wheelwash.com/favicon.ico">
+<link rel="shortcut icon" href="<?php echo $this->config->item('outside_base_url'); ?>favicon.ico">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="http://wheelwash.com/css/mini/normalize.min.css">
-<!--<script src="http://wheelwash.com/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>-->
+<link rel="stylesheet" href="<?php echo $this->config->item('outside_base_url'); ?>css/normalize.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-<!--<link rel="stylesheet" href="http://wheelwash.com/css/main.css">-->
-<link rel="stylesheet" href="http://wheelwash.com/css/mini/main.min.css">
-<!--<link rel="stylesheet" href="http://wheelwash.com/css/styles.css">-->
-<link rel="stylesheet" href="http://wheelwash.com/css/mini/styles.min.css">
+<link rel="stylesheet" href="<?php echo $this->config->item('outside_base_url'); ?>css/main.min.css">
+<link rel="stylesheet" href="<?php echo $this->config->item('outside_base_url'); ?>css/styles.css">
 </head>
 <body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-<!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.js"><\/script>')</script> --> 
-<!--<script src="http://wheelwash.com/js/main.js"></script>-->
-<script src="http://wheelwash.com/js/main.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="<?php echo $this->config->item('outside_base_url'); ?>js/jquery.cookiebar.min.js"></script>
+<script src="<?php echo $this->config->item('outside_base_url'); ?>js/main.js"></script>
 <?php if($this->uri->segment(1) == 'product' && $this->uri->segment(2) == '') { ?>
-	<script src="http://wheelwash.com/js/dial.js"></script>
-	<script src="http://wheelwash.com/js/mini/jquery.flot.min.js"></script>
-    <script src="http://wheelwash.com/js/mini/jquery.flot.pie.min.js"></script>   
-    <!--<script src="http://wheelwash.com/js/kinetic.min.js"></script>-->
+	<script src="<?php echo $this->config->item('outside_base_url'); ?>js/dial.js"></script>
+	<script src="<?php echo $this->config->item('outside_base_url'); ?>js/jquery.flot.min.js"></script>
+    <script src="<?php echo $this->config->item('outside_base_url'); ?>js/jquery.flot.pie.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/kineticjs/5.0.6/kinetic.min.js"></script>
 <?php } ?>
 <?php if($this->uri->segment(1) == 'product' || $this->uri->segment(1) == 'contact') { ?>
@@ -39,72 +42,71 @@
 <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-<div class="language-link" style="display:none;"><?php echo base_url();?></div>
+<div class="language-link" style="display:none"><?php echo base_url();?></div>
+<div class="main-link" style="display:none"><?php echo $this->config->item('outside_base_url'); ?></div>
 <div class="header-container">
   <header class="wrapper clearfix">
-    <div class="logo-container"> <a href="<?php echo base_url();?>"><img src="http://wheelwash.com/img/logo-stretch.png" /></a><img src="http://wheelwash.com/img/25.png" class="twofive" /> </div>
+    <div class="logo-container"> <a href="<?php echo base_url();?>" title="Wheelwash - Wheel cleaning solutions home page"><img src="<?php echo $this->config->item('outside_base_url'); ?>img/logo-stretch.png" alt="Wheelwash - Wheel cleaning solutions Logo" /></a><img src="<?php echo $this->config->item('outside_base_url'); ?>img/25.png" class="twofive" alt="Wheelwash - Wheel cleaning solutions completes 25 years" /> </div>
     <!--<h1 class="title">h1.title</h1>--> 
     <a class="mobile-button" href="#"></a>
     <ul class="mobile-menu">
-      <li><a href="<?php echo base_url('product');?>">Products</a>
+      <li><a href="<?php echo base_url('product');?>" title="Wheelwash - Wheel cleaning solutions View all products selector">Products</a>
         <ul>
-          <li class="hide-mobile"><a href="<?php echo base_url('product');?>">Product Selector</a></li>
-          <li><a href="<?php echo base_url('product/express');?>">Ecowash Express</a></li>
-          <li><a href="<?php echo base_url('product/excel');?>">Ecowash Excel</a></li>
-          <li><a href="<?php echo base_url('product/extra');?>">Ecowash Extra</a></li>
-          <li><a href="<?php echo base_url('product/extraclear');?>">Ecowash Extra Clear</a></li>
-          <li><a href="<?php echo base_url('product/extreme');?>">Ecowash Extreme</a></li>
-          <li><a href="<?php echo base_url('product/ecoramp');?>">Ecoramp</a></li>
-          <li><a href="<?php echo base_url('product/ecobath');?>">Ecobath</a></li>
-          <li><a href="<?php echo base_url('product/bespoke');?>">Bespoke</a></li>
-          <li><a href="<?php echo base_url('product/ecoclear');?>">Ecoclear</a></li>
-          <li><a href="http://agriwash.com/" target="_blank">Agriwash</a></li>
+          <li class="hide-mobile"><a href="<?php echo base_url('product');?>" title="Wheelwash - Wheel cleaning solutions View all products selector">Product Selector</a></li>
+          <li><a href="<?php echo base_url('product/express');?>" title="Wheelwash - Wheel cleaning solutions Rhino Ecowash Express">Ecowash Express</a></li>
+          <li><a href="<?php echo base_url('product/excel');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecowash excel">Ecowash Excel</a></li>
+          <li><a href="<?php echo base_url('product/extra');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecowash extra">Ecowash Extra</a></li>
+          <li><a href="<?php echo base_url('product/extraclear');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecowash extra clear">Ecowash Extra Clear</a></li>
+          <li><a href="<?php echo base_url('product/extreme');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecowash extreme">Ecowash Extreme</a></li>
+          <li><a href="<?php echo base_url('product/ecoramp');?>" title="Wheelwash - Wheel cleaning solutions Rhino Ecoramp">Ecoramp</a></li>
+          <li><a href="<?php echo base_url('product/ecobath');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecobath">Ecobath</a></li>
+          <li><a href="<?php echo base_url('product/bespoke');?>" title="Wheelwash - Wheel cleaning solutions Rhino bespoke">Bespoke</a></li>
+          <li><a href="<?php echo base_url('product/ecoclear');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecoclear">Ecoclear</a></li>
+          <li><a href="http://agriwash.com/" target="_blank" title="Wheelwash - Wheel cleaning solutions Rhino Agriwash">Agriwash</a></li>
         </ul>
       </li>
-      <li><a href="<?php echo base_url('services');?>">Services</a></li>
-      <li><a href="<?php echo base_url('about');?>">About</a></li>
-      <li><a href="<?php echo base_url('contact');?>">Contact</a></li>
+      <li><a href="<?php echo base_url('services');?>" title="Wheelwash - Wheel cleaning solutions Services Information">Services</a></li>
+      <li><a href="<?php echo base_url('about');?>" title="Wheelwash - Wheel cleaning solutions About Infromation">About</a></li>
+      <li><a href="<?php echo base_url('contact');?>" title="Wheelwash - Wheel cleaning solutions International contact information">Contact</a></li>
       <li>
-        <form action="<?php echo base_url();?>search.php" method="get">
-          <input type="text" name="query" id="query" size="40" value="" action="http://wheelwash.com/sphider/include/js_suggest/suggest.php" columns="2" autocomplete="off" delay="1500">
+        <form action="<?php echo base_url();?>pages/search/" method="post">
+          <input type="text" name="q" id="query" size="40" value="" columns="2" autocomplete="off" delay="1500">
           <input type="submit" value="Search" style="display:none;">
-          <input type="hidden" name="search" value="1">
         </form>
       </li>
-      <li><a href="http://wheelwash.com/en/" class="active">English</a> / <a href="http://wheelwash.com/es/">Español</a></li>
+      <li><a href="<?php echo $this->config->item('outside_base_url'); ?>en/" class="active" title="Wheelwash - Wheel cleaning solutions View site in English language">English</a> / <a href="<?php echo $this->config->item('outside_base_url'); ?>es/" title="Wheelwash - Wheel cleaning solutions View site in Spanish version">Español</a></li>
     </ul>
     <div class="regions-container"> <a href="#" class="regions">Language</a>
       <ul class="regions-dropdown">
-        <li><a href="http://wheelwash.com/en/" class="active">English</a></li>
-        <li><a href="http://wheelwash.com/es/">Español</a></li>
+        <li><a href="<?php echo $this->config->item('outside_base_url'); ?>en/" class="active" title="Wheelwash - Wheel cleaning solutions View site in English language">English</a></li>
+        <li><a href="<?php echo $this->config->item('outside_base_url'); ?>es/" title="Wheelwash - Wheel cleaning solutions View site in Spanish language">Español</a></li>
       </ul>
     </div>
     <nav>
       <ul>
-        <li class="products"><a href="<?php echo base_url('product');?>">Products</a>
+        <li class="products"><a href="<?php echo base_url('product');?>" title="Wheelwash - Wheel cleaning solutions View all products selector">Products</a>
           <ul class="dropdown">
-            <li><a href="<?php echo base_url('product');?>">Product Selector</a></li>
-            <li><a href="<?php echo base_url('product/express');?>">Ecowash Express</a></li>
-            <li><a href="<?php echo base_url('product/excel');?>">Ecowash Excel</a></li>
-            <li><a href="<?php echo base_url('product/extra');?>">Ecowash Extra</a></li>
-            <li><a href="<?php echo base_url('product/extraclear');?>">Ecowash Extra Clear</a></li>
-            <li><a href="<?php echo base_url('product/extreme');?>">Ecowash Extreme</a></li>
-            <li><a href="<?php echo base_url('product/ecoramp');?>">Ecoramp</a></li>
-            <li><a href="<?php echo base_url('product/ecobath');?>">Ecobath</a></li>
-            <li><a href="<?php echo base_url('product/bespoke');?>">Bespoke</a></li>
-            <li><a href="<?php echo base_url('product/ecoclear');?>">Ecoclear</a></li>
-            <li><a href="http://agriwash.com/" target="_blank">Agriwash</a></li>
+            <li><a href="<?php echo base_url('product');?>" title="Wheelwash - Wheel cleaning solutions View all products selector">Product Selector</a></li>
+            <li><a href="<?php echo base_url('product/express');?>" title="Wheelwash - Wheel cleaning solutions Rhino Ecowash Express">Ecowash Express</a></li>
+            <li><a href="<?php echo base_url('product/excel');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecowash excel">Ecowash Excel</a></li>
+            <li><a href="<?php echo base_url('product/extra');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecowash extra">Ecowash Extra</a></li>
+            <li><a href="<?php echo base_url('product/extraclear');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecowash extra clear">Ecowash Extra Clear</a></li>
+            <li><a href="<?php echo base_url('product/extreme');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecowash extreme">Ecowash Extreme</a></li>
+            <li><a href="<?php echo base_url('product/ecoramp');?>" title="Wheelwash - Wheel cleaning solutions Rhino Ecoramp">Ecoramp</a></li>
+            <li><a href="<?php echo base_url('product/ecobath');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecobath">Ecobath</a></li>
+            <li><a href="<?php echo base_url('product/bespoke');?>" title="Wheelwash - Wheel cleaning solutions Rhino bespoke">Bespoke</a></li>
+            <li><a href="<?php echo base_url('product/ecoclear');?>" title="Wheelwash - Wheel cleaning solutions Rhino ecoclear">Ecoclear</a></li>
+            <li><a href="http://agriwash.com/" target="_blank" title="Wheelwash - Wheel cleaning solutions Rhino Agriwash">Agriwash</a></li>
           </ul>
           <div class="beside-dropdown"> </div>
         </li>
-        <li><a href="<?php echo base_url('services');?>">Services</a></li>
-        <li><a href="<?php echo base_url('about');?>">About</a></li>
-        <li><a href="<?php echo base_url('contact');?>">Contact</a></li>
+        <li><a href="<?php echo base_url('services');?>" title="Wheelwash - Wheel cleaning solutions Services Information">Services</a></li>
+        <li><a href="<?php echo base_url('about');?>" title="Wheelwash - Wheel cleaning solutions About Infromation">About</a></li>
+        <li><a href="<?php echo base_url('contact');?>" title="Wheelwash - Wheel cleaning solutions International contact information">Contact</a></li>
         <li>
-          <form action="<?php echo base_url();?>search.php" method="get">
-            <input type="text" name="query" id="query" size="40" value="" action="http://wheelwash.com/sphider/include/js_suggest/suggest.php" columns="2" autocomplete="off" delay="1500">
+          <form action="<?php echo base_url();?>pages/search/" method="post">
+            <input type="text" name="q" id="query" size="40" value="" columns="2" autocomplete="off" delay="1500">
             <input type="submit" value="Search" style="display:none;">
-            <input type="hidden" name="search" value="1">
           </form>
         </li>
       </ul>

@@ -14,7 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://wheelwash.com/en/';
+$config['base_url']	= 'http://localhost/wheelwash/en/';
+$config['outside_base_url']	= 'http://localhost/wheelwash/';
 
 /*
 |--------------------------------------------------------------------------

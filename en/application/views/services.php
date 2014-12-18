@@ -1,15 +1,15 @@
-<div class="slide-container" style="background-image:url(http://wheelwash.com/uploads/<?php foreach ($slides as $slide) { if($slide->name == 'services') { echo $slide->image_link_5; } }?>);">
+<div class="slide-container" style="background-image:url(<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php foreach ($slides as $slide) { if($slide->name == 'services') { echo $slide->image_link_5; } }?>);">
   <div class="wrap">
-    <ul style="background-image:url(http://wheelwash.com/uploads/<?php foreach ($slides as $slide) { if($slide->name == 'services') { echo $slide->image_link_1; } }?>);">
+    <ul style="background-image:url(<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php foreach ($slides as $slide) { if($slide->name == 'services') { echo $slide->image_link_1; } }?>);">
       <a href="#" class="arrow-left"><i class="fa fa-angle-left"></i></a> <a href="#" class="arrow-right"><i class="fa fa-angle-right"></i></a>
       <?php foreach ($slides as $slide) { ?>
         <?php if($slide->name == 'services') { ?>
-          <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_1; ?>"> </li>
-          <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_2; ?>"> </li>
-          <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_3; ?>"> </li>
-          <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_4; ?>"> </li>
-          <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_5; ?>"> </li>
-          <li> <img src="http://wheelwash.com/uploads/<?php echo $slide->image_link_6; ?>"> </li>
+          <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_1; ?>" alt="Wheelwash wheel cleaning solutions - Services we provide" /> </li>
+          <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_2; ?>" alt="Wheelwash wheel cleaning solutions - Services we provide" /> </li>
+          <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_3; ?>" alt="Wheelwash wheel cleaning solutions - Services we provide" /> </li>
+          <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_4; ?>" alt="Wheelwash wheel cleaning solutions - Services we provide" /> </li>
+          <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_5; ?>" alt="Wheelwash wheel cleaning solutions - Services we provide" /> </li>
+          <li> <img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $slide->image_link_6; ?>" alt="Wheelwash wheel cleaning solutions - Services we provide" /> </li>
         <?php } ?>
       <?php } ?>
     </ul>
@@ -43,22 +43,22 @@
       <li>Quotes for buy backs</li>
     </ul>
     <div class="line"></div>
-    <!--<div class="middle" style="background:url(http://wheelwash.com/img/services-1.jpg);">
+    <!--<div class="middle" style="background:url(<?php echo $this->config->item('outside_base_url'); ?>img/services-1.jpg);">
       <div class="gradient"></div>
     </div>-->
     <div class="three-circles">
-      <figure><img src="http://wheelwash.com/img/design-1.jpg" /></figure>
-      <figure><img src="http://wheelwash.com/img/design-2.jpg" /></figure>
-      <figure><img src="http://wheelwash.com/img/design-3.jpg" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/design-1.jpg" alt="Wheelwash wheel cleaning solutions - Services we provide - In-house design" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/design-2.jpg" alt="Wheelwash wheel cleaning solutions - Services we provide - In-house design" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/design-3.jpg" alt="Wheelwash wheel cleaning solutions - Services we provide - In-house design" /></figure>
     </div>
     <h1>In-House Design</h1>
     <p>Wheelwash is at the forefront of product development, incorporating time and cost saving features into our standard equipment.</p>
     <p>Our team is also experienced in providing unbeatable bespoke solutions for a wide range of sites, ground conditions, vehicles and differing international regulations.</p>
     <div class="line"></div>
     <div class="three-circles">
-      <figure><img src="http://wheelwash.com/img/service-1.jpg" /></figure>
-      <figure><img src="http://wheelwash.com/img/service-2.jpg" /></figure>
-      <figure><img src="http://wheelwash.com/img/service-3.jpg" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/service-1.jpg" alt="Wheelwash wheel cleaning solutions - Services we provide - Service Support" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/service-2.jpg" alt="Wheelwash wheel cleaning solutions - Services we provide - Service Support" /></figure>
+      <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>img/service-3.jpg" alt="Wheelwash wheel cleaning solutions - Services we provide - Service Support" /></figure>
     </div>
     <h1>Service Support</h1>
     <h2>Dedicated Point of Contact</h2>
@@ -67,7 +67,7 @@
     <p>Our full service maintenance contracts help to ensure that your Wheelwash is permanently protected. Detailed periodic inspections and subsequent servicing provided by Wheelwash ensures that units are kept in perfect working condition, minimizing the cost of corrective maintenance.  Regular visits incorporate condition monitoring of components, which can identify potential problems before they happen, eliminating the opportunity for equipment failure and possible production losses or site shut down.</p>
 	<p>The standard contract is based on a four visit per year contract, but can be re-designed to suit your needs. Ask us about our flexible payment options.</p>
     <p><b>We service and maintain wheel washing equipment from any manufacturer.</b></p>
-    <!--<div class="middle" style="background:url(http://wheelwash.com/img/services-2.jpg);">
+    <!--<div class="middle" style="background:url(<?php echo $this->config->item('outside_base_url'); ?>img/services-2.jpg);">
       <div class="gradient"></div>
     </div>
     <h1>Service Support</h1>
@@ -82,7 +82,7 @@
     <h2>Spare parts delivered quickly</h2>
     <p>We stock a wide range of off-the-shelf components which is supported by a network of supplies for other items. Please call our spares support line on 01606 531022 or <a href="mailto:djump@wheelwash.com" target="_blank">email us</a> for technical enquiries and availability.</p>-->
     <div class="line"></div>
-    <!--<div class="middle" style="background:url(http://wheelwash.com/img/services-3.jpg);">
+    <!--<div class="middle" style="background:url(<?php echo $this->config->item('outside_base_url'); ?>img/services-3.jpg);">
       <div class="gradient"></div>
     </div>-->
     <h1>Weighbridges</h1>
@@ -99,7 +99,7 @@
         <?php $v = 0; foreach ($news as $newsitem) { ?>
         <li>
           <?php $v++; ?>
-          <figure><img src="http://wheelwash.com/uploads/<?php echo $newsitem->image_link; ?>" /></figure><p><a href="<?php echo base_url('news');?>/show/<?php echo $newsitem->id; ?>"><?php echo $newsitem->title; ?></a><br /><br /><?php echo substr($newsitem->content, 0, 120) . '...'; ?></p>
+          <figure><img src="<?php echo $this->config->item('outside_base_url'); ?>uploads/<?php echo $newsitem->image_link; ?>" alt="Wheelwash wheel cleaning solutions - Recent news articles" /></figure><p><a href="<?php echo base_url('news');?>/show/<?php echo $newsitem->id; ?>" title="Wheelwash wheel cleaning solutions - Recent news articles - <?php echo $newsitem->title; ?>"><?php echo $newsitem->title; ?></a><br /><br /><?php echo substr($newsitem->content, 0, 120) . '...'; ?></p>
           <?php if($v == 5) break; ?>
         </li>
         <?php } ?>

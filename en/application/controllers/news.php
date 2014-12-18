@@ -12,7 +12,9 @@ function __construct()
 	public function index()
 	{
     	$data['news'] = $this->news_model->getall();
-		$this->load->view('header');
+		$data['title'] = 'News';
+		$data['description'] = 'Wheelwash wheel cleaning solutions - Latest news and updates. ' . $data['news'][0]->title . '. ' . $data['news'][1]->title . '. ' . $data['news'][2]->title . '. ' . $data['news'][3]->title;
+		$this->load->view('header', $data);
 		$this->load->view('news', $data);
 		$this->load->view('footer');	
 	}
@@ -20,7 +22,9 @@ function __construct()
 	public function show($id)
 	{
     	$data['news'] = $this->news_model->getone($id);
-		$this->load->view('header');
+		$data['title'] = 'News';
+		$data['description'] = 'Wheelwash wheel cleaning solutions - Latest news and updates. ' . $data['news']['title'] . ' - ' . $data['news']['content'];
+		$this->load->view('header', $data);
 		$this->load->view('shownews', $data);
 		$this->load->view('footer');	
 	}
@@ -54,7 +58,7 @@ function __construct()
 	public function getone($id)
 	{
 		$news = $this->news_model->getone($id);
-		echo '<h3>' . $news['title'] . '<span>' . substr($news['modified_date'], 0, 10) . '</span></h3><div class="summary">' . substr($news['content'], 0, 255) . '</div><div class="content" style="display:none;">' . $news['content'] . '</div><div class="image" style="display:none;"><img src="http://renewgroupuk.com/wheelwash/uploads/' . $news['image_link'] . '" /></div>';
+		echo '<h3>' . $news['title'] . '<span>' . substr($news['modified_date'], 0, 10) . '</span></h3><div class="summary">' . substr($news['content'], 0, 255) . '</div><div class="content" style="display:none;">' . $news['content'] . '</div><div class="image" style="display:none;"><img src="' . $this->config->item('outside_base_url') . 'uploads/' . $news['image_link'] . '" /></div>';
 	}
 	
 	public function delete($id)

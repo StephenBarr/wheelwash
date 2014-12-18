@@ -5,7 +5,7 @@
       <h4>Sistema de lavado en seco de alto rendimiento</h4>
     </div>
     <div class="productright one">
-      <img src="http://wheelwash.com/img/ecoramp-logo.png" />
+      <img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-logo.png" />
     </div>
     <div class="productleft">
       <p><b>El Rhino Ecoramp es un sistema sencillo, diseñado para evitar la propagación de la suciedad y los escombros en las vías públicas. Es nuestro sistema de limpieza de ruedas más ecológico ya que no requiere energía, ni agua y además no requiere prácticamente mantenimiento. La limpieza se basa en el efecto de vibración creada por los neumáticos de los vehículos al circular sobre los angulares.</b></p>
@@ -21,26 +21,28 @@ la suciedad y los escombros caigan al suelo. Los diferentes componentes del sist
     </div>
     <div class="productright">
       <ul>
-        <li><img src='http://wheelwash.com/img/icon-4.png' />No requiere energía</li>
-        <li><img src='http://wheelwash.com/img/icon-15.png' />No requiere agua</li>
-        <li><img src='http://wheelwash.com/img/icon-16.png' />Min. 5 revoluciones</li>
-        <li><img src='http://wheelwash.com/img/icon-3.png' />Funcionamiento automático</li>
-        <li><img src='http://wheelwash.com/img/icon-6.png' />Móvil</li>
-        <li><img src='http://wheelwash.com/img/icon-5.png' />Sin obra civil</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-4.png' />No requiere energía</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-15.png' />No requiere agua</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-16.png' />Min. 5 revoluciones</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-3.png' />Funcionamiento automático</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-6.png' />Móvil</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-5.png' />Sin obra civil</li>
       </ul>
     </div>
     <div class="line"></div>
-    <div class="productimage"> <img src="http://wheelwash.com/img/ecoramp-1.jpg" /> </div>
+    <div class="productimage"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-1.jpg" /> </div>
     <div class="specifications">
       <table>
         <tbody>
           <tr>
             <td>Rampas</td>
-            <td>3000mm x 1100mm x 415mm</td>
+            <td>3000mm x 1100mm x 380mm<br />
+              450Kg (cada una)</td>
           </tr>
           <tr>
             <td>Tramos móviles</td>
-            <td>4000mm x 1100mm x 415mm</td>
+            <td>4000mm x 1100mm x 380mm<br />
+              657Kg (cada una)</td>
           </tr>
           <tr>
             <td>Barreras de seguridad</td>
@@ -48,16 +50,17 @@ la suciedad y los escombros caigan al suelo. Los diferentes componentes del sist
           </tr>
         </tbody>
       </table>
+      <p style="font-size:10px;padding-left:12px">La imagen muestra el sistema Rhino Ecoramp de 18m</p>
     </div>
     <div class="line"></div>
     <div class="productbottomleft">
       <ul>
-        <li><img src="http://wheelwash.com/img/ecoramp-2.jpg" />Rampas de perfil bajo</li>
-        <li><img src="http://wheelwash.com/img/ecoramp-3.jpg" />Piezas adicionales para una mayor robustez</li>
-        <li><img src="http://wheelwash.com/img/ecoramp-4.jpg" />Barreras de seguridad</li>
-        <li><img src="http://wheelwash.com/img/ecoramp-5.jpg" />Varias longitudes disponibles</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-2.jpg" />Rampas de perfil bajo</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-3.jpg" />Piezas adicionales para una mayor robustez</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-4.jpg" />Barreras de seguridad</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoramp-5.jpg" />Varias longitudes disponibles</li>
       </ul>
-      <a href="Rhino%20Ecoramp.pdf" class="button download" target="_blank">Descargar ficha técnica en .pdf</a> <a href="http://wheelwash.com/es/product" class="button">Haga clic aquí para más información</a> <a href="http://wheelwash.com/es/contact" class="button">Contactar</a>
+      <a href="Rhino%20Ecoramp.pdf" class="button download" target="_blank">Descargar ficha técnica en .pdf</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>es/product" class="button">Haga clic aquí para más información</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>es/contact" class="button">Contactar</a>
     </div>
     <div class="productbottomright">
       <h4>Requisitos del cliente</h4>
@@ -67,7 +70,7 @@ la suciedad y los escombros caigan al suelo. Los diferentes componentes del sist
       </ul>
     </div>
     <div class="productbottom">
-      <div><img src="http://wheelwash.com/img/madeinbritain.png" /> <img src="http://wheelwash.com/img/iso.png" />
+      <div><img src="<?php echo $this->config->item('outside_base_url'); ?>img/madeinbritain.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/iso.png" />
       </div>
       <p>* Todos los pesos son aproximados y de las piezas secas. Wheelwash Limited se reserva el derecho de cambiar las especificaciones detalladas. Los dibujos son para mostrar los diseños y no se encuentran a escala.
 Las especificaciones se basan en los modelos disponibles para el Reino Unido, por favor pregunte por los detalles fuera de esta ubicación. Las especificaciones pueden variar cuando se suministran equipos de alquiler.<br />

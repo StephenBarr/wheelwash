@@ -187,7 +187,7 @@ function addThis(whoisit) {
 			e.preventDefault();
 			
 			$(this).animate({'opacity': 0.1}, 500);
-			$(this).after('<div class="hider" style="width:100%;height:100%;z-index:999;display:block;"><img src="http://wheelwash.com/img/admin-loader.gif" style="position:absolute;left:50%;top:50%;" /></div>');
+			$(this).after('<div class="hider" style="width:100%;height:100%;z-index:999;display:block;"><img src="../img/admin-loader.gif" style="position:absolute;left:50%;top:50%;" /></div>');
 			
 			var formData = new FormData($(this)[0]);
 			
@@ -307,7 +307,7 @@ function editThis(whoisit, obj) {
 			e.preventDefault();
 			
 			$(this).animate({'opacity': 0.1}, 500);
-			$(this).after('<div class="hider" style="width:100%;height:100%;z-index:999;display:block;"><img src="http://wheelwash.com/img/admin-loader.gif" style="position:absolute;left:50%;top:50%;" /></div>');
+			$(this).after('<div class="hider" style="width:100%;height:100%;z-index:999;display:block;"><img src="../img/admin-loader.gif" style="position:absolute;left:50%;top:50%;" /></div>');
 			
 			var formData = new FormData($(this)[0]);
 			
@@ -410,7 +410,7 @@ function servicesSlideManager() {
 		
 		$(this).siblings('img').fadeOut(500, function() { $(this).remove(); });
 
-		$(this).replaceWith('<img src="http://wheelwash.com/img/admin-loader-white.gif" class="loader" />');
+		$(this).replaceWith('<img src="../img/admin-loader-white.gif" class="loader" />');
 		
 		$.ajax({
 			url: prelink + 'slides/updateservices/' + thisInput.attr('name'),
@@ -419,7 +419,7 @@ function servicesSlideManager() {
 			async: true,
 			success: function(response) {
 				$('.slides-services .loader').replaceWith(thisInput.val(''));
-				$(thisInput).before('<img src="http://wheelwash.com/uploads/' + response + '" />');
+				$(thisInput).before('<img src="../../uploads/' + response + '" />');
 				$('.main-container.slides-admin .slides-services figure i').unbind('click');
 				$('.main-container.slides-admin .slides-services figure').find('input').unbind('change');
 				servicesSlideManager();
@@ -452,7 +452,7 @@ function aboutSlideManager() {
 		$(this).siblings('img').fadeOut(500, function() { $(this).remove(); });
 		var id = $('.slides-about form').attr('id');
 
-		$(this).replaceWith('<img src="http://wheelwash.com/img/admin-loader-white.gif" class="loader" />');
+		$(this).replaceWith('<img src="../img/admin-loader-white.gif" class="loader" />');
 		
 		$.ajax({
 			url: prelink + 'slides/updateabout/' + thisInput.attr('name'),
@@ -461,7 +461,7 @@ function aboutSlideManager() {
 			async: true,
 			success: function(response) {
 				$('.slides-about .loader').replaceWith(thisInput.val(''));
-				$(thisInput).before('<img src="http://wheelwash.com/uploads/' + response + '" />');
+				$(thisInput).before('<img src="../../uploads/' + response + '" />');
 				$('.main-container.slides-admin .slides-about figure i').unbind('click');
 				$('.main-container.slides-admin .slides-about figure').find('input').unbind('change');
 				aboutSlideManager();

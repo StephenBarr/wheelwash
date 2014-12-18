@@ -1,14 +1,15 @@
+var mainLink;
 $( document ).ready(function() {
-	 
+	mainLink = $('.main-link').html(); 
 	var data = [
-		{ label: "extra", data: 12.5, color: "#199b90", h3: "Rhino Ecowash Extra", h6: "Sistema de lavado de alto rendimiento por aspersión con sistema de recirculación de agua", li: "<li><img src='http://wheelwash.com/img/icon-7.png' />Variador de velocidad</li><li><img src='http://wheelwash.com/img/icon-9.png' />Costes operacionales</li><li><img src='http://wheelwash.com/img/icon-10.png' />4.2 BAR</li><li><img src='http://wheelwash.com/img/icon-11.png' />60 Amps<br />40 Kva</li><li><img src='http://wheelwash.com/img/icon-1.png' />36,000 L Reciclaje de Agua</li><li><img src='http://wheelwash.com/img/icon-2.png' />1-2 Revoluciones de rueda</li><li><img src='http://wheelwash.com/img/icon-6.png' />Móvil</li><li><img src='http://wheelwash.com/img/icon-5.png' />No requiere obra civil</li><li><img src='http://wheelwash.com/img/icon-12.png' />Sumidero externo</li><li><img src='http://wheelwash.com/img/icon-3.png' />Funcionamiento automático</li>", desc: "<img src='http://wheelwash.com/img/extra-1.jpg' />", circ: "<figure><img src='http://wheelwash.com/img/extra-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Tuberia de petróleo</figure><figure><img src='http://wheelwash.com/img/extra-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-us.png' class='flag' /><b>EEUU</b><br />Construcción</figure><figure><img src='http://wheelwash.com/img/extra-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-sp.png' class='flag' /><b>Espana</b><br />Vertedero</figure>", pdf: "Rhino%20Ecowash%20Extra.pdf" },
-		{ label: "extraclear", data: 12.5, color: "#25b571", h3: "Rhino Extra Clear", h6: "Sistema de lavado de alto rendimiento por aspersión con filtro de lamelas y sistema de recirculación de agua. ", li: "<li><img src='http://wheelwash.com/img/icon-7.png' />Variador de velocidad</li><li><img src='http://wheelwash.com/img/icon-9.png' />Costes operacionales</li><li><img src='http://wheelwash.com/img/icon-10.png' />4.2 BAR</li><li><img src='http://wheelwash.com/img/icon-11.png' />63 Amps<br />45 Kva</li><li><img src='http://wheelwash.com/img/icon-1.png' />200m<sup>2</sup> capacidad de sedimentación</li><li><img src='http://wheelwash.com/img/icon-2.png' />1-2 Revoluciones de rueda</li><li><img src='http://wheelwash.com/img/icon-6.png' />Móvil</li><li><img src='http://wheelwash.com/img/icon-5.png' />No requiere obra civil</li><li><img src='http://wheelwash.com/img/icon-12.png' />Sumidero externo</li><li><img src='http://wheelwash.com/img/icon-3.png' />Funcionamiento automático</li>", desc: "<img src='http://wheelwash.com/img/extraclear-1.jpg' />", circ: "<figure><img src='http://wheelwash.com/img/extraclear-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Construcción</figure><figure><img src='http://wheelwash.com/img/extraclear-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Construcción</figure><figure><img src='http://wheelwash.com/img/extraclear-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Construcción</figure>", pdf: "Rhino%20Ecowash%20Extra%20Clear.pdf" },
-		{ label: "extreme", data: 12.5, color: "#73c15d", h3: "Rhino Ecowash Extreme", h6: "Sistema de lavado de alto rendimiento por aspersión con sistema de recirculación de agua", li: "<li><img src='http://wheelwash.com/img/icon-7.png' />Variador de velocidad</li><li><img src='http://wheelwash.com/img/icon-9.png' />Costes operacionales</li><li><img src='http://wheelwash.com/img/icon-8.png' />5 BAR</li><li><img src='http://wheelwash.com/img/icon-11.png' />80 Amps<br />80 Kva</li><li><img src='http://wheelwash.com/img/icon-1.png' />56,000 L Reciclaje de Agua</li><li><img src='http://wheelwash.com/img/icon-2.png' />4 Revoluciones de rueda</li><li><img src='http://wheelwash.com/img/icon-6.png' />Móvil</li><li><img src='http://wheelwash.com/img/icon-5.png' />No requiere obra civil</li><li><img src='http://wheelwash.com/img/icon-12.png' />Sumidero externo</li><li><img src='http://wheelwash.com/img/icon-3.png' />Funcionamiento automático</li>", circ: "<figure><img src='http://wheelwash.com/img/extreme-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-sp.png' class='flag' /><b>Espana</b><br />Puerto</figure><figure><img src='http://wheelwash.com/img/extreme-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Cantera</figure><figure><img src='http://wheelwash.com/img/extreme-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-gr.png' class='flag' /><b>Grecia</b><br />Cantera</figure>", desc: "<img src='http://wheelwash.com/img/extreme-1.jpg' />", pdf: "Rhino%20Ecowash%20Extreme.pdf" },
-		{ label: "ecoramp", data: 12.5, color: "#ff6633", h3: "Rhino Ecoramp", h6: "Sistema de lavado de ruedas de alto rendimiento", li: "<li><img src='http://wheelwash.com/img/icon-4.png' />No requiere energía</li><li><img src='http://wheelwash.com/img/icon-15.png' />No requiere agua</li><li><img src='http://wheelwash.com/img/icon-16.png' />Min. 5 revoluciones de rueda</li><li><img src='http://wheelwash.com/img/icon-3.png' />No necesita operarios</li><li><img src='http://wheelwash.com/img/icon-6.png' />Movil</li><li><img src='http://wheelwash.com/img/icon-5.png' />No requiere obra civil</li>", circ: "<figure><img src='http://wheelwash.com/img/ecoramp-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Cantera</figure><figure><img src='http://wheelwash.com/img/ecoramp-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-fr.png' class='flag' /><b>Francia</b><br />Remediacion</figure><figure><img src='http://wheelwash.com/img/ecoramp-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Construcción</figure>", desc: "<img src='http://wheelwash.com/img/ecoramp-1.jpg' />", pdf: "Rhino%20Ecoramp.pdf" },
-		{ label: "ecobath", data: 12.5, color: "#660099", h3: "Rhino Ecobath", h6: "Sistema de lavado de ruedas de alto rendimiento", li: "<li><img src='http://wheelwash.com/img/icon-4.png' />No necesita energía</li><li><img src='http://wheelwash.com/img/icon-15.png' />13.750 litros de agua</li><li><img src='http://wheelwash.com/img/icon-16.png' />Mínimo 3 revoluciones de rueda</li><li><img src='http://wheelwash.com/img/icon-3.png' />funcionamiento automático</li><li><img src='http://wheelwash.com/img/icon-6.png' />Movil</li><li><img src='http://wheelwash.com/img/icon-5.png' />Sin obra civil</li>", circ: "<figure><img src='http://wheelwash.com/img/ecobath-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Construcción</figure><figure><img src='http://wheelwash.com/img/ecobath-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-us.png' class='flag' /><b>EEUU</b><br />Construcción</figure><figure><img src='http://wheelwash.com/img/ecobath-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-be.png' class='flag' /><b>Bélgica</b><br />Sitio Industrial</figure>", desc: "<img src='http://wheelwash.com/img/ecobath-1.jpg' />", pdf: "Rhino%20Ecobath.pdf" },
-		{ label: "bespoke", data: 12.5, color: "#999999", h3: "Rhino Bespoke", h6: "Cualquier sistema de la gama Eco puede ser adaptado según sus requerimientos.  ", li: "<li><img src='http://wheelwash.com/img/icon-7.png' />Variador de velocidad</li><li><img src='http://wheelwash.com/img/icon-9.png' />Costes operacionales</li><li><img src='http://wheelwash.com/img/icon-17.png' />BAR alto</li><li><img src='http://wheelwash.com/img/icon-11.png' />Bajo consumo de energía</li><li><img src='http://wheelwash.com/img/icon-1.png' />Reciclaje de agua opcional</li><li><img src='http://wheelwash.com/img/icon-2.png' />Varias revoluciones de rueda</li><li><img src='http://wheelwash.com/img/icon-6.png' />Móvil</li><li><img src='http://wheelwash.com/img/icon-5.png' />No requiere obra civil</li><li><img src='http://wheelwash.com/img/icon-12.png' />Sumidero externo</li><li><img src='http://wheelwash.com/img/icon-3.png' />No necesita operarios</li>", circ: "<figure><img src='http://wheelwash.com/img/bespoke-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Vertedero</figure><figure><img src='http://wheelwash.com/img/bespoke-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-au.png' class='flag' /><b>Australia</b><br />Cantera</figure><figure><img src='http://wheelwash.com/img/bespoke-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Cantera</figure>", desc: "", pdf: "#" },
-		{ label: "express", data: 12.5, color: "#31559d", h3: "Rhino Ecowash Express", h6: "Sistema de lavado de alto rendimiento por aspersión con sistema de recirculación de agua", li: "<li><img src='http://wheelwash.com/img/icon-13.png' />1.5 BAR</li><li><img src='http://wheelwash.com/img/icon-11.png' />32 Amps<br />20 Kva</li><li><img src='http://wheelwash.com/img/icon-1.png' />4,000 L Reciclaje de Agua</li><li><img src='http://wheelwash.com/img/icon-6.png' />Móvil<li><img src='http://wheelwash.com/img/icon-5.png' />No requiere obra civil</li><li><img src='http://wheelwash.com/img/icon-3.png' />Funcionamiento automático</li><li><img src='http://wheelwash.com/img/icon-12.png' />Sumidero externo</li>", circ: "<figure><img src='http://wheelwash.com/img/express-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Instalación de inseminación de bovinos</figure><figure><img src='http://wheelwash.com/img/express-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-su.png' class='flag' /><b>Suriname</b><br />Mina</figure><figure><img src='http://wheelwash.com/img/express-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-sp.png' class='flag' /><b>España</b><br />Construcción</figure>", desc: "<img src='http://wheelwash.com/img/express-1.jpg' />", pdf: "Rhino%20Ecowash%20Express.pdf" },
-		{ label: "excel", data: 12.5, color: "#247aa2", h3: "Rhino Ecowash Excel", h6: "Sistema de lavado de alto rendimiento por aspersión con sistema de recirculación de agua", li: "<li><img src='http://wheelwash.com/img/icon-14.png' />BAR</li><li><img src='http://wheelwash.com/img/icon-11.png' />30 Amps<br />30 Kva</li><li><img src='http://wheelwash.com/img/icon-1.png' />15,000 L Reciclaje de Agua</li><li><img src='http://wheelwash.com/img/icon-2.png' />1 Revolución de rueda</li><li><img src='http://wheelwash.com/img/icon-6.png' />Móvil</li><li><img src='http://wheelwash.com/img/icon-5.png' />No requiere obra civil</li><li><img src='http://wheelwash.com/img/icon-12.png' />Sumidero externo</li><li><img src='http://wheelwash.com/img/icon-3.png' />Funcionamiento automático</li>", circ: "<figure><img src='http://wheelwash.com/img/excel-circle-1.jpg' /><img src='http://wheelwash.com/img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Vertederoe</figure><figure><img src='http://wheelwash.com/img/excel-circle-2.jpg' /><img src='http://wheelwash.com/img/flag-au.png' class='flag' /><b>Australia</b><br />Obra de construcción</figure><figure><img src='http://wheelwash.com/img/excel-circle-3.jpg' /><img src='http://wheelwash.com/img/flag-us.png' class='flag' /><b>EEUU</b><br />Obra de construcción</figure>", desc: "<img src='http://wheelwash.com/img/excel-1.jpg' />", pdf: "Rhino%20Ecowash%20Excel.pdf" }
+		{ label: "extra", data: 12.5, color: "#199b90", h3: "Rhino Ecowash Extra", h6: "Sistema de lavado de alto rendimiento por aspersión con sistema de recirculación de agua", li: "<li><img src='"+mainLink+"img/icon-7.png' />Variador de velocidad</li><li><img src='"+mainLink+"img/icon-9.png' />Costes operacionales</li><li><img src='"+mainLink+"img/icon-10.png' />4.2 BAR</li><li><img src='"+mainLink+"img/icon-11.png' />60 Amps<br />40 Kva</li><li><img src='"+mainLink+"img/icon-1.png' />36,000 L Reciclaje de Agua</li><li><img src='"+mainLink+"img/icon-2.png' />1-2 Revoluciones de rueda</li><li><img src='"+mainLink+"img/icon-6.png' />Móvil</li><li><img src='"+mainLink+"img/icon-5.png' />No requiere obra civil</li><li><img src='"+mainLink+"img/icon-12.png' />Sumidero externo</li><li><img src='"+mainLink+"img/icon-3.png' />Funcionamiento automático</li>", desc: "<img src='"+mainLink+"img/extra-1.jpg' />", circ: "<figure><img src='"+mainLink+"img/extra-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Tuberia de petróleo</figure><figure><img src='"+mainLink+"img/extra-circle-2.jpg' /><img src='"+mainLink+"img/flag-us.png' class='flag' /><b>EEUU</b><br />Construcción</figure><figure><img src='"+mainLink+"img/extra-circle-3.jpg' /><img src='"+mainLink+"img/flag-sp.png' class='flag' /><b>Espana</b><br />Vertedero</figure>", pdf: "Rhino%20Ecowash%20Extra.pdf" },
+		{ label: "extraclear", data: 12.5, color: "#25b571", h3: "Rhino Extra Clear", h6: "Sistema de lavado de alto rendimiento por aspersión con filtro de lamelas y sistema de recirculación de agua. ", li: "<li><img src='"+mainLink+"img/icon-7.png' />Variador de velocidad</li><li><img src='"+mainLink+"img/icon-9.png' />Costes operacionales</li><li><img src='"+mainLink+"img/icon-10.png' />4.2 BAR</li><li><img src='"+mainLink+"img/icon-11.png' />63 Amps<br />45 Kva</li><li><img src='"+mainLink+"img/icon-1.png' />200m<sup>2</sup> capacidad de sedimentación</li><li><img src='"+mainLink+"img/icon-2.png' />1-2 Revoluciones de rueda</li><li><img src='"+mainLink+"img/icon-6.png' />Móvil</li><li><img src='"+mainLink+"img/icon-5.png' />No requiere obra civil</li><li><img src='"+mainLink+"img/icon-12.png' />Sumidero externo</li><li><img src='"+mainLink+"img/icon-3.png' />Funcionamiento automático</li>", desc: "<img src='"+mainLink+"img/extraclear-1.jpg' />", circ: "<figure><img src='"+mainLink+"img/extraclear-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Construcción</figure><figure><img src='"+mainLink+"img/extraclear-circle-2.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Construcción</figure><figure><img src='"+mainLink+"img/extraclear-circle-3.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Construcción</figure>", pdf: "Rhino%20Ecowash%20Extra%20Clear.pdf" },
+		{ label: "extreme", data: 12.5, color: "#73c15d", h3: "Rhino Ecowash Extreme", h6: "Sistema de lavado de alto rendimiento por aspersión con sistema de recirculación de agua", li: "<li><img src='"+mainLink+"img/icon-7.png' />Variador de velocidad</li><li><img src='"+mainLink+"img/icon-9.png' />Costes operacionales</li><li><img src='"+mainLink+"img/icon-8.png' />5 BAR</li><li><img src='"+mainLink+"img/icon-11.png' />80 Amps<br />80 Kva</li><li><img src='"+mainLink+"img/icon-1.png' />56,000 L Reciclaje de Agua</li><li><img src='"+mainLink+"img/icon-2.png' />4 Revoluciones de rueda</li><li><img src='"+mainLink+"img/icon-6.png' />Móvil</li><li><img src='"+mainLink+"img/icon-5.png' />No requiere obra civil</li><li><img src='"+mainLink+"img/icon-12.png' />Sumidero externo</li><li><img src='"+mainLink+"img/icon-3.png' />Funcionamiento automático</li>", circ: "<figure><img src='"+mainLink+"img/extreme-circle-1.jpg' /><img src='"+mainLink+"img/flag-sp.png' class='flag' /><b>Espana</b><br />Puerto</figure><figure><img src='"+mainLink+"img/extreme-circle-2.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Cantera</figure><figure><img src='"+mainLink+"img/extreme-circle-3.jpg' /><img src='"+mainLink+"img/flag-gr.png' class='flag' /><b>Grecia</b><br />Cantera</figure>", desc: "<img src='"+mainLink+"img/extreme-1.jpg' />", pdf: "Rhino%20Ecowash%20Extreme.pdf" },
+		{ label: "ecoramp", data: 12.5, color: "#ff6633", h3: "Rhino Ecoramp", h6: "Sistema de lavado de ruedas de alto rendimiento", li: "<li><img src='"+mainLink+"img/icon-4.png' />No requiere energía</li><li><img src='"+mainLink+"img/icon-15.png' />No requiere agua</li><li><img src='"+mainLink+"img/icon-16.png' />Min. 5 revoluciones de rueda</li><li><img src='"+mainLink+"img/icon-3.png' />No necesita operarios</li><li><img src='"+mainLink+"img/icon-6.png' />Movil</li><li><img src='"+mainLink+"img/icon-5.png' />No requiere obra civil</li>", circ: "<figure><img src='"+mainLink+"img/ecoramp-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Cantera</figure><figure><img src='"+mainLink+"img/ecoramp-circle-2.jpg' /><img src='"+mainLink+"img/flag-fr.png' class='flag' /><b>Francia</b><br />Remediacion</figure><figure><img src='"+mainLink+"img/ecoramp-circle-3.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Construcción</figure>", desc: "<img src='"+mainLink+"img/ecoramp-1.jpg' />", pdf: "Rhino%20Ecoramp.pdf" },
+		{ label: "ecobath", data: 12.5, color: "#660099", h3: "Rhino Ecobath", h6: "Sistema de lavado de ruedas de alto rendimiento", li: "<li><img src='"+mainLink+"img/icon-4.png' />No necesita energía</li><li><img src='"+mainLink+"img/icon-15.png' />13.750 litros de agua</li><li><img src='"+mainLink+"img/icon-16.png' />Mínimo 3 revoluciones de rueda</li><li><img src='"+mainLink+"img/icon-3.png' />funcionamiento automático</li><li><img src='"+mainLink+"img/icon-6.png' />Movil</li><li><img src='"+mainLink+"img/icon-5.png' />Sin obra civil</li>", circ: "<figure><img src='"+mainLink+"img/ecobath-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Construcción</figure><figure><img src='"+mainLink+"img/ecobath-circle-2.jpg' /><img src='"+mainLink+"img/flag-us.png' class='flag' /><b>EEUU</b><br />Construcción</figure><figure><img src='"+mainLink+"img/ecobath-circle-3.jpg' /><img src='"+mainLink+"img/flag-be.png' class='flag' /><b>Bélgica</b><br />Sitio Industrial</figure>", desc: "<img src='"+mainLink+"img/ecobath-1.jpg' />", pdf: "Rhino%20Ecobath.pdf" },
+		{ label: "bespoke", data: 12.5, color: "#999999", h3: "Rhino Bespoke", h6: "Cualquier sistema de la gama Eco puede ser adaptado según sus requerimientos.  ", li: "<li><img src='"+mainLink+"img/icon-7.png' />Variador de velocidad</li><li><img src='"+mainLink+"img/icon-9.png' />Costes operacionales</li><li><img src='"+mainLink+"img/icon-17.png' />BAR alto</li><li><img src='"+mainLink+"img/icon-11.png' />Bajo consumo de energía</li><li><img src='"+mainLink+"img/icon-1.png' />Reciclaje de agua opcional</li><li><img src='"+mainLink+"img/icon-2.png' />Varias revoluciones de rueda</li><li><img src='"+mainLink+"img/icon-6.png' />Móvil</li><li><img src='"+mainLink+"img/icon-5.png' />No requiere obra civil</li><li><img src='"+mainLink+"img/icon-12.png' />Sumidero externo</li><li><img src='"+mainLink+"img/icon-3.png' />No necesita operarios</li>", circ: "<figure><img src='"+mainLink+"img/bespoke-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Vertedero</figure><figure><img src='"+mainLink+"img/bespoke-circle-2.jpg' /><img src='"+mainLink+"img/flag-au.png' class='flag' /><b>Australia</b><br />Cantera</figure><figure><img src='"+mainLink+"img/bespoke-circle-3.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Cantera</figure>", desc: "", pdf: "#" },
+		{ label: "express", data: 12.5, color: "#31559d", h3: "Rhino Ecowash Express", h6: "Sistema de lavado de alto rendimiento por aspersión con sistema de recirculación de agua", li: "<li><img src='"+mainLink+"img/icon-13.png' />1.5 BAR</li><li><img src='"+mainLink+"img/icon-11.png' />32 Amps<br />20 Kva</li><li><img src='"+mainLink+"img/icon-1.png' />4,000 L Reciclaje de Agua</li><li><img src='"+mainLink+"img/icon-6.png' />Móvil<li><img src='"+mainLink+"img/icon-5.png' />No requiere obra civil</li><li><img src='"+mainLink+"img/icon-3.png' />Funcionamiento automático</li><li><img src='"+mainLink+"img/icon-12.png' />Sumidero externo</li>", circ: "<figure><img src='"+mainLink+"img/express-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Instalación de inseminación de bovinos</figure><figure><img src='"+mainLink+"img/express-circle-2.jpg' /><img src='"+mainLink+"img/flag-su.png' class='flag' /><b>Suriname</b><br />Mina</figure><figure><img src='"+mainLink+"img/express-circle-3.jpg' /><img src='"+mainLink+"img/flag-sp.png' class='flag' /><b>España</b><br />Construcción</figure>", desc: "<img src='"+mainLink+"img/express-1.jpg' />", pdf: "Rhino%20Ecowash%20Express.pdf" },
+		{ label: "excel", data: 12.5, color: "#247aa2", h3: "Rhino Ecowash Excel", h6: "Sistema de lavado de alto rendimiento por aspersión con sistema de recirculación de agua", li: "<li><img src='"+mainLink+"img/icon-14.png' />BAR</li><li><img src='"+mainLink+"img/icon-11.png' />30 Amps<br />30 Kva</li><li><img src='"+mainLink+"img/icon-1.png' />15,000 L Reciclaje de Agua</li><li><img src='"+mainLink+"img/icon-2.png' />1 Revolución de rueda</li><li><img src='"+mainLink+"img/icon-6.png' />Móvil</li><li><img src='"+mainLink+"img/icon-5.png' />No requiere obra civil</li><li><img src='"+mainLink+"img/icon-12.png' />Sumidero externo</li><li><img src='"+mainLink+"img/icon-3.png' />Funcionamiento automático</li>", circ: "<figure><img src='"+mainLink+"img/excel-circle-1.jpg' /><img src='"+mainLink+"img/flag-uk.png' class='flag' /><b>Reino Unido</b><br />Vertederoe</figure><figure><img src='"+mainLink+"img/excel-circle-2.jpg' /><img src='"+mainLink+"img/flag-au.png' class='flag' /><b>Australia</b><br />Obra de construcción</figure><figure><img src='"+mainLink+"img/excel-circle-3.jpg' /><img src='"+mainLink+"img/flag-us.png' class='flag' /><b>EEUU</b><br />Obra de construcción</figure>", desc: "<img src='"+mainLink+"img/excel-1.jpg' />", pdf: "Rhino%20Ecowash%20Excel.pdf" }
 	];
 	
 	var plot = $.plot('#dial', data, {
@@ -57,8 +58,8 @@ $( document ).ready(function() {
 	$('#dial').bind('plothover', pieHover);
 	$('#dial').bind('plotclick', pieClick);
 	
-	$('.flot-base').after('<div class="product-names"><img src="http://wheelwash.com/es/product-names.png" /></div>');
-	$('.flot-base').after('<div id="flot-needle"><img src="http://wheelwash.com/img/needle.png" /></div>');
+	$('.flot-base').after('<div class="product-names"><img src="'+mainLink+'es/product-names.png" /></div>');
+	$('.flot-base').after('<div id="flot-needle"><img src="'+mainLink+'img/needle.png" /></div>');
 	
 	$('#flot-needle img').css({ WebkitTransform: 'rotate(43deg)'});
     $('#flot-needle img').css({ '-moz-transform': 'rotate(43deg)'});
@@ -182,9 +183,9 @@ function slideProductIn(obj) {
 					$(element).stop().delay(200*i).animate({'opacity': 1}, 200);	
 				});
 				if(obj.series.label == 'bespoke') {
-					$('.dial-below .circ').empty().after('<a href="http://wheelwash.com/product/'+obj.series.label+'" class="moreinfo button">Haga clic aquí para más información</a><a href="#" class="contct button">Contactar</a>').css('opacity', '1');
+					$('.dial-below .circ').empty().after('<a href="'+mainLink+'product/'+obj.series.label+'" class="moreinfo button">Haga clic aquí para más información</a><a href="#" class="contct button">Contactar</a>').css('opacity', '1');
 				} else {
-					$('.dial-below .circ').empty().after('<a href="'+obj.series.pdf+'" class="download button" target="_blank">Descargar ficha técnica en .pdf</a><a href="http://wheelwash.com/product/'+obj.series.label+'" class="moreinfo button">Haga clic aquí para más información</a><a href="#" class="contct button">Contactar</a>').css('opacity', '1');
+					$('.dial-below .circ').empty().after('<a href="'+obj.series.pdf+'" class="download button" target="_blank">Descargar ficha técnica en .pdf</a><a href="'+mainLink+'product/'+obj.series.label+'" class="moreinfo button">Haga clic aquí para más información</a><a href="#" class="contct button">Contactar</a>').css('opacity', '1');
 				}
 				$(obj.series.circ).each(function(i, element) {
 					preload($(element).find('img').attr('src'));
@@ -259,7 +260,7 @@ function pdform() {
 			},
 			submitHandler: function( form ) {
 				$.ajax({
-					url : 'http://wheelwash.com/contact/download/' + filename,
+					url : mainLink+'contact/download/' + filename,
 					data : $('.pdform').serialize(),
 					type: 'POST',
 					success : function(data) {
@@ -321,7 +322,7 @@ function contactBox() {
 				  
 				  submitHandler: function( form ) {   
 						$.ajax({
-							url : 'http://wheelwash.com/contact/message',
+							url : mainLink+'contact/message',
 							data : $('.contactform').serialize(),
 							type: 'POST',
 							success : function(data) {
@@ -345,24 +346,24 @@ var cir = 0;
 function circularExcel() {
 	if(cir == 0) {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-us.png" class="flag" /><b>EEUU</b><br>Obra de construcción').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-4.jpg" /><img src="'+mainLink+'img/flag-us.png" class="flag" /><b>EEUU</b><br>Obra de construcción').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-5.jpg" /><img src="http://wheelwash.com/img/flag-ch.png" class="flag" /><b>Chile</b><br>Planta de fundición de cobre').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-5.jpg" /><img src="'+mainLink+'img/flag-ch.png" class="flag" /><b>Chile</b><br>Planta de fundición de cobre').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-6.jpg" /><img src="http://wheelwash.com/img/flag-ho.png" class="flag" /><b>Hollanda</b><br>Puerto').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-6.jpg" /><img src="'+mainLink+'img/flag-ho.png" class="flag" /><b>Hollanda</b><br>Puerto').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 1;
 	} else {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Vertedero').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-1.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Vertedero').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-3.jpg" /><img src="http://wheelwash.com/img/flag-au.png" class="flag" /><b>Australia</b><br>Obra de construcción').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-3.jpg" /><img src="'+mainLink+'img/flag-au.png" class="flag" /><b>Australia</b><br>Obra de construcción').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/excel-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-us.png" class="flag" /><b>EEUU</b><br>Obra de construcción').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/excel-circle-4.jpg" /><img src="'+mainLink+'img/flag-us.png" class="flag" /><b>EEUU</b><br>Obra de construcción').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 0;
 	}
@@ -370,24 +371,24 @@ function circularExcel() {
 function circularExtreme() {
 	if(cir == 0) {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-sp.png" class="flag" /><b>Espana</b><br>Cantera').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-4.jpg" /><img src="'+mainLink+'img/flag-sp.png" class="flag" /><b>Espana</b><br>Cantera').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-5.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Reciclaje Inert').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-5.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Reciclaje Inert').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-6.jpg" /><img src="http://wheelwash.com/img/flag-sp.png" class="flag" /><b>Espana</b><br>Cantera').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-6.jpg" /><img src="'+mainLink+'img/flag-sp.png" class="flag" /><b>Espana</b><br>Cantera').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 1;
 	} else {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-sp.png" class="flag" /><b>Espana</b><br>Puerto').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-1.jpg" /><img src="'+mainLink+'img/flag-sp.png" class="flag" /><b>Espana</b><br>Puerto').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-2.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Cantera').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-2.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Cantera').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extreme-circle-3.jpg" /><img src="http://wheelwash.com/img/flag-gr.png" class="flag" /><b>Greece</b><br>Cantera').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extreme-circle-3.jpg" /><img src="'+mainLink+'img/flag-gr.png" class="flag" /><b>Greece</b><br>Cantera').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 0;
 	}
@@ -395,24 +396,24 @@ function circularExtreme() {
 function circularEcobath() {
 	if(cir == 0) {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Infraestructura').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-4.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Infraestructura').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-5.jpg" /><img src="http://wheelwash.com/img/flag-au.png" class="flag" /><b>Australia</b><br>Vertedero').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-5.jpg" /><img src="'+mainLink+'img/flag-au.png" class="flag" /><b>Australia</b><br>Vertedero').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-6.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Construcción').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-6.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Construcción').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 1;
 	} else {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Construcción').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-1.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br>Construcción').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-2.jpg" /><img src="http://wheelwash.com/img/flag-us.png" class="flag" /><b>EEUU</b><br>Construcción').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-2.jpg" /><img src="'+mainLink+'img/flag-us.png" class="flag" /><b>EEUU</b><br>Construcción').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/ecobath-circle-3.jpg" /><img src="http://wheelwash.com/img/flag-be.png" class="flag" /><b>Bélgica</b><br>Sitio industrial').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/ecobath-circle-3.jpg" /><img src="'+mainLink+'img/flag-be.png" class="flag" /><b>Bélgica</b><br>Sitio industrial').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 0;
 	}
@@ -435,24 +436,24 @@ function circularRotation() {
 function circularBespoke() {
 	if(cir == 0) {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Mina').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-4.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Mina').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-5.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Puerto').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-5.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Puerto').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Vertedero').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-1.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Vertedero').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 1;
 	} else {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Vertedero').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-1.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Vertedero').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-2.jpg" /><img src="http://wheelwash.com/img/flag-au.png" class="flag" /><b>Australia</b><br />Cantera').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-2.jpg" /><img src="'+mainLink+'img/flag-au.png" class="flag" /><b>Australia</b><br />Cantera').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/bespoke-circle-3.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Cantera').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/bespoke-circle-3.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Cantera').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 0;
 	}
@@ -460,24 +461,24 @@ function circularBespoke() {
 function circularExtra() {
 	if(cir == 0) {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-4.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Cantera y vertedero').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-4.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Cantera y vertedero').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-5.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Construcción').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-5.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Construcción').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-6.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Cantera').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-6.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Cantera').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 1;
 	} else {
 		$('.dial-below .circ').find('figure').eq(0).stop().animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-1.jpg" /><img src="http://wheelwash.com/img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Tuberia de petróleo').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-1.jpg" /><img src="'+mainLink+'img/flag-uk.png" class="flag" /><b>Reino Unido</b><br />Tuberia de petróleo').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(1).stop().delay(1000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-2.jpg" /><img src="http://wheelwash.com/img/flag-us.png" class="flag" /><b>EEUU</b><br />Construcción').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-2.jpg" /><img src="'+mainLink+'img/flag-us.png" class="flag" /><b>EEUU</b><br />Construcción').stop().animate({'opacity': 1}, 500);
 		});
 		$('.dial-below .circ').find('figure').eq(2).stop().delay(2000).animate({'opacity': 0}, 500, function(){
-			$(this).empty().append('<img src="http://wheelwash.com/img/extra-circle-3.jpg" /><img src="http://wheelwash.com/img/flag-sp.png" class="flag" /><b>Espana</b><br />Vertedero').stop().animate({'opacity': 1}, 500);
+			$(this).empty().append('<img src="'+mainLink+'img/extra-circle-3.jpg" /><img src="'+mainLink+'img/flag-sp.png" class="flag" /><b>Espana</b><br />Vertedero').stop().animate({'opacity': 1}, 500);
 		});
 		cir = 0;
 	}

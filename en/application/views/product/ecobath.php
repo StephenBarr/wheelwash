@@ -5,7 +5,7 @@
       <h4>High performance drive through bath system</h4>
     </div>
     <div class="productright one">
-      <img src="http://wheelwash.com/img/ecobath-logo.png" />
+      <img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecobath-logo.png" alt="Wheelwash wheel cleaning solutions - Rhino ecobath" />
     </div>
     <div class="productleft">
       <p><b>The Rhino Ecobath is a simple, drive through bath system designed to prevent the spread of dirt and debris on to public highways from site vehicles and mobile plant. It is an environmentally friendly wheel cleaner that only requires 13,750 litres of water to become fully operational.</b></p>
@@ -15,23 +15,23 @@
     </div>
     <div class="productright">
       <ul>
-        <li><img src='http://wheelwash.com/img/icon-4.png' />No Power</li>
-        <li><img src='http://wheelwash.com/img/icon-15.png' />13,750 litres water capacity</li>
-        <li><img src='http://wheelwash.com/img/icon-16.png' />Min 3 wheel revolutions</li>
-        <li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li>
-        <li><img src='http://wheelwash.com/img/icon-6.png' />Mobile</li>
-        <li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-4.png' alt="Wheelwash wheel cleaning solutions - Product Details" />No Power</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-15.png' alt="Wheelwash wheel cleaning solutions - Product Details" />13,750 litres water capacity</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-16.png' alt="Wheelwash wheel cleaning solutions - Product Details" />Min 3 wheel revolutions</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-3.png' alt="Wheelwash wheel cleaning solutions - Product Details" />No Operator</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-6.png' alt="Wheelwash wheel cleaning solutions - Product Details" />Mobile</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-5.png' alt="Wheelwash wheel cleaning solutions - Product Details" />No Civils</li>
       </ul>
     </div>
     <div class="line"></div>
-    <div class="productimage"> <img src="http://wheelwash.com/img/ecobath-1.jpg" /> </div>
+    <div class="productimage"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecobath-1.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecobath" /> </div>
     <div class="specifications">
       <table>
         <tbody>
           <tr>
             <td>Central Bath Section</td>
             <td>10000mm x 3500mm x 900mm<br />
-              Weight: 4,565 Kgs</td>
+              5230Kg</td>
           </tr>
           <tr>
             <td>Maximum total capacity</td>
@@ -39,12 +39,13 @@
           </tr>
           <tr>
             <td>Ramps***</td>
-            <td>3000mm x 1100mm x 415mm<br />Weight : 450Kgs</td> 
+            <td>3000mm x 1100mm x 380mm<br />
+              450Kg (each)</td> 
           </tr>
           <tr>
             <td>Mobile Road**</td>
-            <td>4000mm x 1100mm x 415mm<br />
-            Weight: 600Kgs</td>
+            <td>4000mm x 1100mm x 380mm<br />
+              657Kg</td>
           </tr>
         </tbody>
       </table>
@@ -52,12 +53,12 @@
     <div class="line"></div>
     <div class="productbottomleft">
       <ul>
-        <li><img src="http://wheelwash.com/img/ecobath-2.jpg" />Steel angle flexes<br />tyre treads open</li>
-        <li><img src="http://wheelwash.com/img/ecobath-3.jpg" />Tyre tread is submerged</li>
-        <li><img src="http://wheelwash.com/img/ecobath-4.jpg" />Optional mobile road provides additional cleaning</li>
-        <li><img src="http://wheelwash.com/img/ecobath-5.jpg" />Integrated lifting eyes<br />for easy relocation</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecobath-2.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecobath" />Steel angle flexes<br />tyre treads open</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecobath-3.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecobath" />Tyre tread is submerged</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecobath-4.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecobath" />Optional mobile road provides additional cleaning</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecobath-5.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecobath" />Integrated lifting eyes<br />for easy relocation</li>
       </ul>
-      <a href="Rhino%20Ecobath.pdf" class="button download" target="_blank">Download PDF</a> <a href="http://wheelwash.com/en/product" class="button">See all products</a> <a href="http://wheelwash.com/en/contact" class="button">Contact Us</a>
+      <a href="Rhino%20Ecobath.pdf" class="button download" target="_blank" title="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecobath PDF">Download PDF</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>en/product" class="button" title="Wheelwash wheel cleaning solutions - Product Details">See all products</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>en/contact" class="button" title="Wheelwash wheel cleaning solutions - Contact information">Contact Us</a>
     </div>
     <div class="productbottomright">
       <h4>Customer Requirements</h4>
@@ -70,7 +71,7 @@
     </div>
     <div class="productbottom">
       <div>
-        <img src="http://wheelwash.com/img/madeinbritain.png" /> <img src="http://wheelwash.com/img/iso.png" />
+        <img src="<?php echo $this->config->item('outside_base_url'); ?>img/madeinbritain.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecobath" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/iso.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecobath" />
       </div>
       <p>* All weights are approximate dry weights. Wheelwash Limited reserves the right to change detailed specifications from time to time. Drawings are to show indicative layouts only and are not to scale. Specifications are based on supply within the UK, please ask for details outside of this location. Specifications may vary when systems supplied as rental units.<br />
         ** Optional<br />

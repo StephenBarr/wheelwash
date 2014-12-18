@@ -4,7 +4,7 @@
       <h1>Bespoke</h1>
       <h4>Purpose Designed Wheel Cleaning Solutions for your Site</h4>
     </div>
-    <div class="productimage" style="margin-top:0px;"> <img src="http://wheelwash.com/img/bespoke.jpg" /> </div>
+    <div class="productimage" style="margin-top:0px;"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/bespoke.jpg" /> </div>
     <div class="productleft" style="width: 100%;">
       <h2 style="margin-top:0;">Bespoke Designs</h2>
       <p>Our team is experienced in providing unbeatable bespoke solutions for a wide range of sites, ground and conditions and vehicle types.</p>
@@ -13,8 +13,7 @@
         <li>Structural engineering reports when non road going vehicles are used. Axle loads in excess of 12,000 kg</li>
         <li>Full site inspection, report and recommendations</li>
         <li>Full CAD design service including overlay of Wheelwash drawings with site drawings</li>
-        <li>Purpose written operating manuals and detailed daily/weekly/monthly guidelines for getting</li>
-        <li>The best out of your system</li>
+        <li>Purpose written operating manuals and detailed daily/weekly/monthly guidelines for getting the best out of your system</li>
       </ul>
       <h2>Systems we have designed</h2>
       <ul>
@@ -27,10 +26,10 @@
       </ul>
       <div class="main-container logoscroll" style="margin-top:48px;">
         <div class="main wrapper clearfix">
-          <div class="row"> <img src="http://wheelwash.com/img/van-logo.png" /> <img src="http://wheelwash.com/img/codelco-logo.png" /> <img src="http://wheelwash.com/img/castle-logo.png" /> <img src="http://wheelwash.com/img/anglo-logo.png" /> <img src="http://wheelwash.com/img/hanson-logo.png" /> </div><div class="row"> <img src="http://wheelwash.com/img/bam-logo.png" /> <img src="http://wheelwash.com/img/cemex-logo.png" /> <img src="http://wheelwash.com/img/skanska-logo.png" /> <img src="http://wheelwash.com/img/taylor-logo.png" /> <img src="http://wheelwash.com/img/lafarge-logo.png" /> </div></div>
+          <div class="row"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/van-logo.png" alt="Wheelwash wheel cleaning solutions - Organizations we are associated with" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/codelco-logo.png" alt="Wheelwash wheel cleaning solutions - Organizations we are associated with" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/castle-logo.png" alt="Wheelwash wheel cleaning solutions - Organizations we are associated with" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/anglo-logo.png" alt="Wheelwash wheel cleaning solutions - Organizations we are associated with" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/hanson-logo.png" alt="Wheelwash wheel cleaning solutions - Organizations we are associated with" /> </div><div class="row"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/bam-logo.png" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/cemex-logo.png" alt="Wheelwash wheel cleaning solutions - Organizations we are associated with" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/skanska-logo.png" alt="Wheelwash wheel cleaning solutions - Organizations we are associated with" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/taylor-logo.png" alt="Wheelwash wheel cleaning solutions - Organizations we are associated with" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/lafarge-logo.png" alt="Wheelwash wheel cleaning solutions - Organizations we are associated with" /> </div></div>
       </div>
       <center style="margin-top:48px;">
-        <a href="http://wheelwash.com/en/product" class="button" style="margin-right:24px;">See all products</a> <a href="http://wheelwash.com/en/contact" class="button">Contact Us</a>
+        <a href="<?php echo $this->config->item('outside_base_url'); ?>en/product" class="button" style="margin-right:24px;" title="Wheelwash wheel cleaning solutions - See the whole range of Rhino products">See all products</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>en/contact" class="button" alt="Wheelwash wheel cleaning solutions - View emails addresses and other contact information">Contact Us</a>
       </center>
     </div>
   </div>

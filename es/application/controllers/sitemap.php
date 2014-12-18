@@ -13,7 +13,9 @@ class Sitemap extends CI_Controller {
 	{
 		$this->load->model('news_model');
 		$data['news'] = $this->news_model->getall();
-		$this->load->view('header');
+		$data['title'] = 'Sitemap';
+		$data['description'] = 'Wheelwash wheel cleaning solutions - Quick sitemap of the site.';
+		$this->load->view('header', $data);
 		$this->load->view('sitemap', $data);
 		$this->load->view('footer');	
 	}

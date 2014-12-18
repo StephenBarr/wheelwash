@@ -5,7 +5,7 @@
       <h4>High performance compact spray wash system with recycling</h4>
     </div>
     <div class="productright one">
-      <img src="http://renewgroupuk.com/wheelwash/img/express-logo.png" />
+      <img src="<?php echo $this->config->item('outside_base_url'); ?>img/express-logo.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" />
     </div>
     <div class="productleft">
       <p><b>The Rhino Ecowash Express is the smallest of the high pressure spray wash systems, designed for the tightest of spaces. Like all systems in the Rhino Ecowash range, it provides, unrivalled reliability and performance. Operating on a closed loop system, it also effectively recycles the water it uses.</b></p>
@@ -16,54 +16,61 @@
     </div>
     <div class="productright">
       <ul>
-        <li><img src="http://renewgroupuk.com/wheelwash/img/icon-13.png" />1.5 BAR</li>
-        <li><img src="http://renewgroupuk.com/wheelwash/img/icon-11.png" />32 Amps<br />20 Kva</li>
-        <li><img src="http://renewgroupuk.com/wheelwash/img/icon-1.png" />4,000L Water Recycling</li>
-        <li><img src="http://renewgroupuk.com/wheelwash/img/icon-6.png" />Mobile</li>
-        <li><img src="http://renewgroupuk.com/wheelwash/img/icon-5.png" />No Civils</li>
-        <li style="border-bottom-width:9px;"><img src="http://renewgroupuk.com/wheelwash/img/icon-3.png" />No Operator</li>
-        <li><img src="http://renewgroupuk.com/wheelwash/img/icon-12.png" />External Sump</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-13.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" />1.5 BAR</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-11.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" />32 Amps<br />20 Kva</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-1.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" />4,000L Water Recycling</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-6.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" />Mobile</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-5.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" />No Civils</li>
+        <li style="border-bottom-width:9px;"><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-3.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" />No Operator</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/icon-12.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" />External Sump</li>
       </ul>
     </div>
     <div class="line"></div>
-    <div class="productimage"> <img src="http://renewgroupuk.com/wheelwash/img/express-1.jpg" /> </div>
+    <div class="productimage"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/express-1.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" /> </div>
     <div class="specifications">
       <table>
         <tbody>
           <tr>
             <td>Wash Platform</td>
-            <td>2000mm x 3300mm x 415mm<br />
-              2205 Kgs 2650 Litres Capacity</td>
+            <td>2000mm x 3500mm x 380mm<br />
+              1425 Kg 1325 Litres Capacity</td>
           </tr>
           <tr>
             <td>Side Screens</td>
             <td>1 Off / 2000mm x 2000mm x 4.3mm<br />
-              optional 2nd side screen</td>
+              optional 2nd side screen, 70kg</td>
           </tr>
           <tr style="border-bottom:0px">
             <td>Ramps**</td>
-            <td>3000mm x 1100mm x 415mm</td>
+            <td>3000mm x 1100mm x 380mm<br />
+              450kg (each)</td>
           </tr>
           <tr>
             <td>Mobile Road**</td>
-            <td>3000mm x 1100mm x 415mm</td>
+            <td>4000mm x 1100mm x 380mm<br />
+              657Kg (each)</td>
           </tr>
           <tr style="border-bottom:0px">
             <td>Wash Pump</td>
-            <td>3.7 kw 1100 L/min.</td>
+            <td>3.9 kw, 1100 L/min.</td>
           </tr>
           <tr>
             <td>Recovery Pump</td>
-            <td>3.7 kw 960 L/min.</td>
+            <td>3.4 kw 860 L/min.</td>
           </tr>
           <tr>
             <td>Settlement Tank</td>
             <td>2000mm x 2000mm x 1000mm<br />
-              4000 Litres Capacity</td>
+              554Kg, 4000 Litres Capacity</td>
+          </tr>
+          <tr>
+            <td>Sensors</td>
+            <td>Entry sensor, adjustible timed run</td>
           </tr>
           <tr>
             <td>Power requirement</td>
-            <td>32amps, 20kva</td>
+            <td>415v, 3 phase<br />
+              32amps, 20kva</td>
           </tr>
         </tbody>
       </table>
@@ -71,12 +78,11 @@
     <div class="line"></div>
     <div class="productbottomleft">
       <ul>
-        <li><img src="http://renewgroupuk.com/wheelwash/img/express-2.jpg" />Powerful, targeted wash</li>
-        <li><img src="http://renewgroupuk.com/wheelwash/img/express-3.jpg" />External sump for easy mantenance</li>
-        <li><img src="http://renewgroupuk.com/wheelwash/img/express-4.jpg" />Dual purpose sidescreen saves space</li>
-        <li><img src="http://renewgroupuk.com/wheelwash/img/express-5.jpg" />Optional additional sidecreen in case of remote recycling</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/express-2.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" />External sump for easy mantenance</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/express-4.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" />Dual purpose sidescreen saves space</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/express-5.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" />Optional additional sidecreen in case of remote recycling</li>
       </ul>
-      <a href="Rhino%20Ecowash%20Express.pdf" class="download button" target="_blank">Download PDF</a> <a href="http://renewgroupuk.com/wheelwash/product" class="button">See all products</a> <a href="http://renewgroupuk.com/wheelwash/contact" class="button">Contact Us</a>
+      <a href="Rhino%20Ecowash%20Express.pdf" class="download button" target="_blank" title="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express PDF">Download PDF</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>product" class="button" alt="Wheelwash wheel cleaning solutions - Product Details - View all products">See all products</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>contact" class="button" alt="Wheelwash wheel cleaning solutions - Product Details - Contact information">Contact Us</a>
     </div>
     <div class="productbottomright">
       <h4>Customer Requirements</h4>
@@ -89,7 +95,7 @@
       </ul>
     </div>
     <div class="productbottom">
-      <div> <img src="http://renewgroupuk.com/wheelwash/img/madeinbritain.png" /> <img src="http://renewgroupuk.com/wheelwash/img/iso.png" /> </div>
+      <div> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/madeinbritain.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/iso.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecowash Express" /> </div>
       <p>* All weights are approximate dry weights. Wheelwash Limited reserves the right to change detailed specifications from time to time. Drawings are to show indicative layouts only and are not to scale. Specifications are based on supply within the UK, please ask for details outside of this location. Specifications may vary when systems supplied as rental units.<br />
         ** Optional</p>
      </div>

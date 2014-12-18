@@ -5,7 +5,7 @@
       <h4>High performance waste water treatment system</h4>
     </div>
     <div class="productright one">
-      <img src="http://wheelwash.com/img/ecoclear-logo.png" />
+      <img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-logo.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" />
     </div>
     <div class="productleft">
       <p><b>The Ecoclear waste water treatment system is the best performing lamella clarifier designed for use in wheel washing applications. It has been developed in collaboration with Scott Vickers Pte, the creators of the Cleartec range of systems which have been successfully cleaning waste and surface water from construction sites for many years, worldwide.</b></p>
@@ -17,31 +17,32 @@
     </div>
     <div class="productright">
       <ul>
-        <li><img src='http://wheelwash.com/img/icon-4.png' />No Power</li>
-        <li><img src='http://wheelwash.com/img/icon-1.png' />=200m<sup>2</sup> recycling capacity</li>
-        <li><img src='http://wheelwash.com/img/icon-3.png' />No Operator</li>
-        <li style="border-width: 0 0 9px 0;"><img src='http://wheelwash.com/img/icon-6.png' />Mobile</li>
-        <li><img src='http://wheelwash.com/img/icon-5.png' />No Civils</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-4.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" />No Power</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-1.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" />=200m<sup>2</sup> effective water recycling capacity</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-3.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" />No Operator</li>
+        <li style="border-width: 0 0 9px 0;"><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-6.png' />Mobile</li>
+        <li><img src='<?php echo $this->config->item('outside_base_url'); ?>img/icon-5.png' alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" />No Civils</li>
       </ul>
     </div>
     <div class="line"></div>
-    <div class="productimage"> <img src="http://wheelwash.com/img/ecoclear-1.jpg" /> </div>
+    <div class="productimage"> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-1.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" /> </div>
     <div class="specifications">
       <table>
         <tbody>
           <tr>
             <td>Primary Tank</td>
             <td>2000mm x 4000mm x 2000mm<br />
-              16,000 l capacity </td>
+              1300kg, 12,000 Litres Capacity </td>
           </tr>
           <tr style="border-bottom:0px">
             <td>Secondary Tank</td>
-            <td>4000mm x 1800mm x 2500mm = 192m<sup>2</sup></td>
+            <td>4000mm x 1800mm x 1250mm<br />
+              1250kg x 12,000 Litres Capacity = 192m<sup>2</sup></td>
           </tr>
           <tr>
-            <td>Header Tank</td>
-            <td>2000mm x 2000mm x 4000mm<br />
-              12,000 l capacity/td> 
+            <td>Pump/Header Tank</td>
+            <td>400mm x 2000mm x 2000mm<br />
+              1548kg, 12,000 Litres Capacity</td> 
           </tr>
           <tr>
             <td>Total Capacity</td>
@@ -55,12 +56,12 @@
     <div class="line"></div>
     <div class="productbottomleft">
       <ul>
-        <li><img src="http://wheelwash.com/img/ecoclear-2.jpg" />Lamella blocks provide a large surface area for effective solids removal</li>
-        <li><img src="http://wheelwash.com/img/ecoclear-3.jpg" />Autohopper discharge valves for automatic emptying</li>
-        <li><img src="http://wheelwash.com/img/ecoclear-4.jpg" />Covered hinged walkway </li>
-        <li><img src="http://wheelwash.com/img/ecoclear-5.jpg" />Quality recycled water</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-2.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" />Lamella blocks provide a large surface area for effective solids removal</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-3.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" />Autohopper discharge valves for automatic emptying</li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-4.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" />Covered hinged walkway </li>
+        <li><img src="<?php echo $this->config->item('outside_base_url'); ?>img/ecoclear-5.jpg" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" />Quality recycled water</li>
       </ul>
-      <a href="Rhino%20Ecoclear.pdf" class="button download" target="_blank">Download PDF</a> <a href="http://wheelwash.com/en/product" class="button">See all products</a> <a href="http://wheelwash.com/en/contact" class="button">Contact Us</a>
+      <a href="Rhino%20Ecoclear.pdf" class="button download" target="_blank" title="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear PDF">Download PDF</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>en/product" class="button" title="Wheelwash wheel cleaning solutions - Product Details - View all">See all products</a> <a href="<?php echo $this->config->item('outside_base_url'); ?>en/contact" class="button" title="Wheelwash wheel cleaning solutions - Product Details - Contact information">Contact Us</a>
     </div>
     <div class="productbottomright">
       <h4>Customer Requirements</h4>
@@ -71,7 +72,7 @@
       </ul>
     </div>
     <div class="productbottom">
-      <div> <img src="http://wheelwash.com/img/madeinbritain.png" /> <img src="http://wheelwash.com/img/iso.png" /> </div>
+      <div> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/madeinbritain.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" /> <img src="<?php echo $this->config->item('outside_base_url'); ?>img/iso.png" alt="Wheelwash wheel cleaning solutions - Product Details - Rhino Ecoclear" /> </div>
       <p>* All weights are approximate dry weights. Wheelwash Limited reserves the right to change detailed specifications from time to time. Drawings are to show indicative layouts only and are not to scale. Specifications are based on supply within the UK, please ask for details outside of this location. Specifications may vary when systems supplied as rental units.<br />
         ** Optional</p>
     </div>

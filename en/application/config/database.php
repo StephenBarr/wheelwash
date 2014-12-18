@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'wheelwash';
-$db['default']['password'] = '+mE5%a8(';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['database'] = 'wheelwash';
 /*$db['default']['hostname'] = 'db406083047.db.1and1.com';
 $db['default']['username'] = 'dbo406083047';

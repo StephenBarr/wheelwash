@@ -92,7 +92,8 @@ class Auth extends CI_Controller
 					$data['captcha_html'] = $this->_create_captcha();
 				}
 			}
-			$this->load->view('header');
+			$data['description'] = '';
+			$this->load->view('header', $data);
 			$this->load->view('auth/login_form', $data);
 			$this->load->view('footer');
 		}
@@ -117,6 +118,7 @@ class Auth extends CI_Controller
 	 */
 	function register()
 	{
+		$glow = 0;
 		if ($this->tank_auth->is_logged_in()) {									// logged in
 			redirect('');
 
@@ -164,7 +166,9 @@ class Auth extends CI_Controller
 
 						unset($data['password']); // Clear password (just for any case)
 
-						$this->_show_message($this->lang->line('auth_message_registration_completed_1'));
+						$glow = 1;
+						$data['message']  = $this->lang->line('auth_message_registration_completed_1');
+						//$this->_show_message($this->lang->line('auth_message_registration_completed_1'));
 
 					} else {
 						if ($this->config->item('email_account_details', 'tank_auth')) {	// send "welcome" email
@@ -173,7 +177,9 @@ class Auth extends CI_Controller
 						}
 						unset($data['password']); // Clear password (just for any case)
 
-						$this->_show_message($this->lang->line('auth_message_registration_completed_2').' '.anchor('/auth/login/', 'Login'));
+						$glow = 1;
+						$data['message']  = $this->lang->line('auth_message_registration_completed_2');
+						//$this->_show_message($this->lang->line('auth_message_registration_completed_2').' '.anchor('/auth/login/', 'Login'));
 					}
 				} else {
 					$errors = $this->tank_auth->get_error_message();
@@ -190,8 +196,10 @@ class Auth extends CI_Controller
 			$data['use_username'] = $use_username;
 			$data['captcha_registration'] = $captcha_registration;
 			$data['use_recaptcha'] = $use_recaptcha;
-			$this->load->view('header');
-			$this->load->view('auth/register_form', $data);
+			$data['description'] = '';
+			$this->load->view('header', $data);
+			if($glow == 0){ $this->load->view('auth/register_form', $data); } else { $this->load->view('flash', $data); }
+			//$this->load->view('auth/register_form', $data);
 			$this->load->view('footer');
 		}
 	}
@@ -227,9 +235,10 @@ class Auth extends CI_Controller
 					foreach ($errors as $k => $v)	$data['errors'][$k] = $this->lang->line($v);
 				}
 			}
-			$this->load->view('header');
+			$data['description'] = '';
+			$this->load->view('header', $data);
 			$this->load->view('auth/send_again_form', $data);
-			$this->load->view('header');
+			$this->load->view('footer');
 		}
 	}
 
@@ -272,6 +281,8 @@ class Auth extends CI_Controller
 			$this->form_validation->set_rules('login', 'Email or login', 'trim|required|xss_clean');
 
 			$data['errors'] = array();
+			
+			$glow = 0;
 
 			if ($this->form_validation->run()) {								// validation ok
 				if (!is_null($data = $this->tank_auth->forgot_password(
@@ -281,16 +292,21 @@ class Auth extends CI_Controller
 
 					// Send email with password activation link
 					$this->_send_email('forgot_password', $data['email'], $data);
+					
+					$glow = 1;
+					$data['message'] = $this->lang->line('auth_message_new_password_sent');
 
-					$this->_show_message($this->lang->line('auth_message_new_password_sent'));
+					//$this->_show_message($this->lang->line('auth_message_new_password_sent'));
 
 				} else {
 					$errors = $this->tank_auth->get_error_message();
 					foreach ($errors as $k => $v)	$data['errors'][$k] = $this->lang->line($v);
 				}
 			}
-			$this->load->view('header');
-			$this->load->view('auth/forgot_password_form', $data);
+			$data['description'] = '';
+			$this->load->view('header', $data);
+			if($glow == 0){ $this->load->view('auth/forgot_password_form', $data); } else { $this->load->view('flash', $data); }
+			//$this->load->view('auth/forgot_password_form', $data);
 			$this->load->view('footer');
 		}
 	}
@@ -304,6 +320,7 @@ class Auth extends CI_Controller
 	 */
 	function reset_password()
 	{
+		$glow = 0;
 		$user_id		= $this->uri->segment(3);
 		$new_pass_key	= $this->uri->segment(4);
 
@@ -322,10 +339,14 @@ class Auth extends CI_Controller
 				// Send email with new password
 				$this->_send_email('reset_password', $data['email'], $data);
 
-				$this->_show_message($this->lang->line('auth_message_new_password_activated').' '.anchor('/auth/login/', 'Login'));
+				$glow = 1;
+				$data['message'] = $this->lang->line('auth_message_new_password_activated');
+				//$this->_show_message($this->lang->line('auth_message_new_password_activated').' '.anchor('/auth/login/', 'Login'));
 
 			} else {														// fail
-				$this->_show_message($this->lang->line('auth_message_new_password_failed'));
+				$glow = 1;
+				$data['message'] = $this->lang->line('auth_message_new_password_failed');
+				//$this->_show_message($this->lang->line('auth_message_new_password_failed'));
 			}
 		} else {
 			// Try to activate user by password key (if not activated yet)
@@ -337,8 +358,9 @@ class Auth extends CI_Controller
 				$this->_show_message($this->lang->line('auth_message_new_password_failed'));
 			}
 		}
-		$this->load->view('header');
-		$this->load->view('auth/reset_password_form', $data);
+		$data['description'] = '';
+		$this->load->view('header', $data);
+		if($glow == 0) { $this->load->view('auth/reset_password_form', $data); } else { $this->load->view('flash', $data); }
 		$this->load->view('footer');
 	}
 
@@ -370,7 +392,8 @@ class Auth extends CI_Controller
 					foreach ($errors as $k => $v)	$data['errors'][$k] = $this->lang->line($v);
 				}
 			}
-			$this->load->view('header');
+			$data['description'] = '';
+			$this->load->view('header', $data);
 			$this->load->view('auth/change_password_form', $data);
 			$this->load->view('footer');
 		}
@@ -409,7 +432,8 @@ class Auth extends CI_Controller
 					foreach ($errors as $k => $v)	$data['errors'][$k] = $this->lang->line($v);
 				}
 			}
-			$this->load->view('header');
+			$data['description'] = '';
+			$this->load->view('header', $data);
 			$this->load->view('auth/change_email_form', $data);
 			$this->load->view('footer');
 		}
@@ -444,6 +468,7 @@ class Auth extends CI_Controller
 	 */
 	function unregister()
 	{
+		$glow = 0;
 		if (!$this->tank_auth->is_logged_in()) {								// not logged in or not activated
 			redirect('/auth/login/');
 
@@ -455,14 +480,17 @@ class Auth extends CI_Controller
 			if ($this->form_validation->run()) {								// validation ok
 				if ($this->tank_auth->delete_user(
 						$this->form_validation->set_value('password'))) {		// success
-					$this->_show_message($this->lang->line('auth_message_unregistered'));
+					$glow = 1;
+					$data['message'] = $this->lang->line('auth_message_unregistered');
+					//$this->_show_message($this->lang->line('auth_message_unregistered'));
 
 				} else {														// fail
 					$errors = $this->tank_auth->get_error_message();
 					foreach ($errors as $k => $v)	$data['errors'][$k] = $this->lang->line($v);
 				}
 			}
-			$this->load->view('header');
+			$data['description'] = '';
+			$this->load->view('header', $data);
 			$this->load->view('auth/unregister_form', $data);
 			$this->load->view('footer');
 		}
@@ -476,8 +504,13 @@ class Auth extends CI_Controller
 	 */
 	function _show_message($message)
 	{
-		$this->session->set_flashdata('message', $message);
-		redirect('/auth/');
+		$data['message'] = $message;
+		$data['description'] = '';
+		$this->load->view('header', $data);
+		$this->load->view('flash', $data);
+		$this->load->view('footer');
+		//$this->session->set_flashdata('message', $message);
+		//redirect('/auth/');
 	}
 
 	/**

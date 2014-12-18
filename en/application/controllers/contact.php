@@ -10,7 +10,9 @@ class Contact extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('header');
+		$data['title'] = 'Contact Us';
+		$data['description'] = 'Wheelwash wheel cleaning solutions - Contact information. Wheelwash Chile, Av. La Dehesa 1201, Of. 515 Oriente, Lo Barnechea, Santiago, Chile. Wheelwash Canada, c/o Kiely Distribution Co., 700 McClellan Street, Long Branch, N.J. 07740. Wheelwash Netherlands, MB Dustcontrol B.V., Industrieweg 2, 2254 AE Voorschoten, The Netherlands. Wheelwash Limited, Pyms Lane, Crewe, Cheshire, CW1 3PJ. Wheelwash España, c/o Instalaciones y Representaciones Industriales Irimac, S.L.éíó, C/ Cimadevilla, 1, Oficina D, 33820 Grado, Asturias. Wheelwash Ireland, c/o Walkers Municipal Services, Unit 2D Kylemore Industrial Estate, Killeen Road, Dublin 10. Svensk Vattenförsörjning AB, Fjäll Rönningen, 671 95, Klässbol, Värmlands län, Sweden. Mortec Infrastructure & Recycling Equipment Ltd., 16 Hazait St., Kfar Bilu, 76965, Israel. Wheelwash Australia, PO Box 227, Somerton, Victoria 3062';
+		$this->load->view('header', $data);
 		$this->load->view('contact');
 		$this->load->view('footer');	
 	}
@@ -45,7 +47,7 @@ class Contact extends CI_Controller {
 		$this->email->set_alt_message('Website Download Notification');
 		  
 		if($this->email->send()) {
-			echo '<a href="http://wheelwash.com/en/pdf/' . $filename . '" target="_blank" class="button download final">Download PDF file(Opens in new window)</a>';
+			echo '<a href="' . $this->config->item('outside_base_url') . 'en/pdf/' . $filename . '" target="_blank" class="button download final">Download PDF file(Opens in new window)</a>';
 		} else {
 			echo 'Some problem occurred.';
 		}   

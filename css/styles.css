@@ -28,8 +28,7 @@ html, body {
 	width: 60%;
 	text-align: right;
 	padding: 9px 0 7px;
-	filter: alpha(opacity=0);
-	opacity: 0;
+	color: #FFFFFF
 }
 .header-container .regions-container .regions {
 	font-size: 14px;
@@ -39,7 +38,7 @@ html, body {
 }
 .header-container .regions-container .regions:after {
 	content: '';
-	background: url(../../img/down.png);
+	background: url(../img/down.png);
 	width: 10px;
 	height: 5px;
 	display: block;
@@ -58,14 +57,21 @@ html, body {
 	z-index: 99;
 	background: #0D4B98;
 	opacity: .9;
-	padding: 2px 15px 12px;
+	padding: 2px 15px 0px;
 	display: none
+}
+.header-container .regions-container .regions-dropdown li {
+	width: 164px
 }
 .header-container .regions-container .regions-dropdown li a {
 	color: #FFF;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 36px;
 	text-decoration: none
+}
+.header-container .regions-container .regions-dropdown li a.active, .header-container .mobile-menu li a.active {
+	pointer-events: none;
+	cursor: default
 }
 .header-container .regions-container .regions-dropdown li a:hover {
 	color: #FBC839
@@ -78,7 +84,7 @@ html, body {
 	padding: 7px 6px 6px 30px;
 	float: right;
 	margin-top: 6px;
-	background: url(../../img/search.png) no-repeat 8px 6px;
+	background: url(../img/search.png) no-repeat 8px 6px;
 	background-color: #F5F5F5
 }
 .header-container nav ul .products > a {
@@ -87,7 +93,7 @@ html, body {
 }
 .header-container nav ul .products > a:after {
 	content: '';
-	background: url(../../img/down.png);
+	background: url(../img/down.png);
 	width: 10px;
 	height: 5px;
 	display: block;
@@ -226,7 +232,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endCo
 	text-align: center;
 	margin-bottom: 48px;
 	margin-top: 24px;
-	background: url(../../img/line.png) right 144px no-repeat
+	background: url(../img/line.png) right 144px no-repeat
 }
 .main-container.home article:last-child {
 	background: none!important
@@ -359,7 +365,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endCo
 .main-container .line {
 	height: 6px;
 	margin: 48px 0;
-	background: url(../../img/line-h.png)
+	background: url(../img/line-h.png)
 }
 .main-container .middle {
 	width: 100%;
@@ -425,7 +431,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endCo
 	height: 112px;
 	vertical-align: top;
 	text-align: center;
-	background: url(../../img/line.png) right no-repeat
+	background: url(../img/line.png) right no-repeat
 }
 .main-container.news .wrapper .news-left p a {
 	color: #0D4B98;
@@ -617,19 +623,19 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endCo
 	width: 40%;
 	text-align: center;
 	padding: 12px 9px 21px;
-	height: 108px;
+	height: 120px;
 	font-size: 11px;
 	line-height: 14px;
 	vertical-align: top;
 	float: left;
 	border-width: 0 0 9px;
-	border-image: url(../../img/blueline.png) 11 11 repeat;
+	border-image: url(../img/blueline.png) 11 11 repeat;
 	border-style: solid;
 	color: #0D4B98
 }
 .main-container.product .wrapper .productright ul li:nth-child(odd) {
 	border-width: 0 9px 9px 0;
-	border-image: url(../../img/blueline.png) 11 11 repeat;
+	border-image: url(../img/blueline.png) 11 11 repeat;
 	border-style: solid
 }
 .main-container.product .wrapper .productright ul li:nth-last-child(-n+2) {
@@ -644,7 +650,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endCo
 	width: 100%;
 	height: 6px;
 	margin: 48px 0;
-	background: url(../../img/blueline.png)
+	background: url(../img/blueline.png)
 }
 .main-container.product .wrapper .productimage {
 	margin: 48px auto 48px;
@@ -989,7 +995,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endCo
 }
 .map-container {
 	width: 100%;
-	background-image: url(../../img/map.jpg);
+	background-image: url(../img/map.jpg);
 	background-position: center;
 	background-size: cover;
 	z-index: 0
@@ -1337,8 +1343,8 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endCo
 	border: none;
 	padding: 7px 6px 6px 30px;
 	margin-top: 24px;
-	margin-bottom: 120px;
-	background: url(../../img/search.png) no-repeat 8px 6px;
+	margin-bottom: 24px;
+	background: url(../img/search.png) no-repeat 8px 6px;
 	background-color: #F5F5F5
 }
 .header-container header .mobile-button, .header-container header .mobile-menu, .header-container, body {
@@ -1639,7 +1645,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endCo
 	width: 100%;
 }
 .map-container .wrap a, .map-container {
-	background-image: url(../../img/map_.png)
+	background-image: url(../img/map_.png)
 }
 .map-container .wrap a, .map-container .wrap a .circle {
 	display: none
@@ -1696,7 +1702,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endCo
 	padding-bottom: 48px
 }
 .privacy, .faq, .termsofuse, .sitemap {
-	background: url(../../img/line-h.png) no-repeat bottom center;
+	background: url(../img/line-h.png) no-repeat bottom center;
 	margin-bottom: 12px
 }
 .wrapper {
@@ -1888,7 +1894,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endCo
 
 @media only screen and (min-width: 1026px) {
 .main-container.home article:nth-child(1), .main-container.home article:nth-child(2) {
-	background: url(../../img/line.png) right 150px no-repeat
+	background: url(../img/line.png) right 150px no-repeat
 }
 .main-container.home article:last-child {
 	background: none

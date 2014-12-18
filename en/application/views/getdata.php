@@ -7,7 +7,7 @@ Renew Group
 <script type='text/javascript' language='javascript'>
 $('#getdata').click(function(){
                 $.ajax({
-                        url: 'http://wheelwash.com/index/getvalues',
+                        url: '<?php echo $this->config->item('outside_base_url'); ?>index/getvalues',
                          type:'POST',
                          dataType: 'json',
                           error: function(){
